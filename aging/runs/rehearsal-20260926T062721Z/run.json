@@ -1,0 +1,6 @@
+{
+  "input_dataset_revision": "7746d62815359a23ead7128a3a337a42633401f8",
+  "code_commit": "744aca9925c1cf4816c216af0f29d97aef468940",
+  "run_id": "36223359553",
+  "memo": "rehearsal 8: level/slope conditioned on curvature steps (3 residual divergences)"
+}

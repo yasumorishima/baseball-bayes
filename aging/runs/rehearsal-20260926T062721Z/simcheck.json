@@ -1,0 +1,80 @@
+{
+ "kalman_vs_dense_max_abs_diff": 7.105427357601002e-15,
+ "players_checked": 50,
+ "divergences": 0,
+ "divergences_per_chain": [
+  0,
+  0,
+  0,
+  0
+ ],
+ "curve_coverage_21_40": 1.0,
+ "scalars": {
+  "mu_entry": {
+   "truth": -0.02,
+   "q05": -0.02304778605,
+   "q95": -0.0190547392,
+   "covered": true
+  },
+  "b_entry": {
+   "truth": -0.002,
+   "q05": -0.002742609225,
+   "q95": -0.001666050365,
+   "covered": true
+  },
+  "sd_entry": {
+   "truth": 0.03,
+   "q05": 0.02754254405,
+   "q95": 0.03097472,
+   "covered": true
+  },
+  "sd_step": {
+   "truth": 0.015,
+   "q05": 0.0148051169,
+   "q95": 0.01749475485,
+   "covered": true
+  },
+  "sigma_pa": {
+   "truth": 0.5,
+   "q05": 0.47883299749999997,
+   "q95": 0.510470816,
+   "covered": true
+  },
+  "tau": {
+   "truth": 0.01,
+   "q05": 0.006225252630000001,
+   "q95": 0.0130671353,
+   "covered": true
+  }
+ },
+ "divergence_report": {
+  "n_divergent": 0,
+  "per_chain": [
+   {
+    "divergent": 0,
+    "stepsize": 0.28360596,
+    "treedepth_max": 4,
+    "at_max_treedepth": 0
+   },
+   {
+    "divergent": 0,
+    "stepsize": 0.30574258,
+    "treedepth_max": 4,
+    "at_max_treedepth": 0
+   },
+   {
+    "divergent": 0,
+    "stepsize": 0.33898962,
+    "treedepth_max": 4,
+    "at_max_treedepth": 0
+   },
+   {
+    "divergent": 0,
+    "stepsize": 0.30398705,
+    "treedepth_max": 4,
+    "at_max_treedepth": 0
+   }
+  ]
+ },
+ "pass": true
+}
