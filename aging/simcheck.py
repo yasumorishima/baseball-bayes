@@ -127,9 +127,11 @@ def main(prep_dir, out_dir):
     res = {"kalman_vs_dense_max_abs_diff": worst,
            "players_checked": len(multi),
            "divergences": int(np.sum(f.divergences)),
+           "divergences_per_chain": [int(x) for x in f.divergences],
            "curve_coverage_21_40": curve_cov,
            "scalars": scalars}
-    res["pass"] = (curve_cov >= 0.8 and all(s["covered"] for s in scalars.values()))
+    res["pass"] = (res["divergences"] == 0 and curve_cov >= 0.8
+                   and all(s["covered"] for s in scalars.values()))
     out = pathlib.Path(out_dir)
     out.mkdir(parents=True, exist_ok=True)
     (out / "simcheck.json").write_text(json.dumps(res, indent=1))

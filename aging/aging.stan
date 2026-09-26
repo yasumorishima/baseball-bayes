@@ -17,6 +17,13 @@
 // A_min + k - 1. cum = cumulative_sum(g) is the aging curve up to a constant;
 // only differences of cum enter the likelihood, so g[1] only anchors the
 // smoothing prior. g follows a second-order random walk.
+//
+// Every scale parameter is sampled on the unit scale of its prior and then
+// multiplied by that scale (e.g. sd_step = 0.03 * sd_step_raw with
+// sd_step_raw ~ half-normal(0, 1), which is sd_step ~ half-normal(0, 0.03)).
+// The model is the same; only the sampler's coordinates change. With the raw
+// scales (0.005 to 0.05) the default initial values started some chains
+// hundreds of times outside the prior, and one chain never recovered.
 data {
   int<lower=1> N;                              // player-seasons, sorted by player then season
   int<lower=1> K;                              // number of integer ages
@@ -35,15 +42,22 @@ data {
 }
 parameters {
   vector[K] g_z;
-  real<lower=0> sd_g;
-  real mu_entry;
-  real b_entry;
-  real<lower=0> sd_entry;
-  real<lower=0> sd_step;
-  real<lower=0> sigma_pa;
-  real<lower=0> tau;
+  real<lower=0> sd_g_raw;
+  real mu_entry_raw;
+  real b_entry_raw;
+  real<lower=0> sd_entry_raw;
+  real<lower=0> sd_step_raw;
+  real<lower=0> sigma_pa_raw;
+  real<lower=0> tau_raw;
 }
 transformed parameters {
+  real sd_g = 0.005 * sd_g_raw;
+  real mu_entry = 0.05 * mu_entry_raw;
+  real b_entry = 0.01 * b_entry_raw;
+  real sd_entry = 0.05 * sd_entry_raw;
+  real sd_step = 0.03 * sd_step_raw;
+  real sigma_pa = 0.5 * sigma_pa_raw;
+  real tau = 0.02 * tau_raw;
   vector[K] g;
   vector[K] cum;
   g[1] = 0.02 * g_z[1];
@@ -54,14 +68,18 @@ transformed parameters {
   cum = cumulative_sum(g);
 }
 model {
+  // Same priors as sd_g ~ half-normal(0, 0.005), mu_entry ~ normal(0, 0.05),
+  // b_entry ~ normal(0, 0.01), sd_entry ~ half-normal(0, 0.05),
+  // sd_step ~ half-normal(0, 0.03), sigma_pa ~ normal+(0.5, 0.2),
+  // tau ~ half-normal(0, 0.02).
   g_z ~ std_normal();
-  sd_g ~ normal(0, 0.005);
-  mu_entry ~ normal(0, 0.05);
-  b_entry ~ normal(0, 0.01);
-  sd_entry ~ normal(0, 0.05);
-  sd_step ~ normal(0, 0.03);
-  sigma_pa ~ normal(0.5, 0.2);
-  tau ~ normal(0, 0.02);
+  sd_g_raw ~ std_normal();
+  mu_entry_raw ~ std_normal();
+  b_entry_raw ~ std_normal();
+  sd_entry_raw ~ std_normal();
+  sd_step_raw ~ std_normal();
+  sigma_pa_raw ~ normal(1, 0.4);
+  tau_raw ~ std_normal();
   {
     real m = 0;   // predicted talent mean before seeing y[n]
     real v = 1;   // and its variance

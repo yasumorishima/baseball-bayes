@@ -43,6 +43,7 @@ def fit(model, data, a_min, use_aging, out, fallback):
     keep = [c for c in s.index if not c.startswith(("z[", "talent["))]
     diag = {
         "divergences": int(np.sum(f.divergences)),
+        "divergences_per_chain": [int(x) for x in f.divergences],
         "max_treedepth_hits": int(np.sum(f.max_treedepths)),
         "max_rhat": float(s.loc[keep, "R_hat"].max()),
         "min_ess_bulk": float(s.loc[keep, "ESS_bulk"].min()),
