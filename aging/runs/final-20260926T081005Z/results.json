@@ -1,0 +1,89 @@
+{
+ "n_players": 410,
+ "total_pa": 161745.0,
+ "wmae": {
+  "aging": 0.02482503691176648,
+  "no_aging": 0.025537252052270705,
+  "marcel": 0.025495572768071795
+ },
+ "wrmse": {
+  "aging": 0.03214460058078594,
+  "no_aging": 0.032742190281386675,
+  "marcel": 0.032963745409784216
+ },
+ "comparisons": {
+  "aging - marcel (wmae)": {
+   "diff": -0.0006705358563053147,
+   "ci95": [
+    -0.001684394208130314,
+    0.00032693880907217095
+   ],
+   "half_width": 0.0010056665086012424,
+   "reading": "indistinguishable"
+  },
+  "aging - marcel (wrmse)": {
+   "diff": -0.0008191448289982736,
+   "ci95": [
+    -0.0018059771640824246,
+    0.00016717875009942168
+   ],
+   "half_width": 0.0009865779570909232,
+   "reading": "indistinguishable"
+  },
+  "aging - no_aging (wmae)": {
+   "diff": -0.000712215140504225,
+   "ci95": [
+    -0.0014297888265054608,
+    2.0500126785408358e-05
+   ],
+   "half_width": 0.0007251444766454347,
+   "reading": "indistinguishable"
+  },
+  "aging - no_aging (wrmse)": {
+   "diff": -0.0005975897006007327,
+   "ci95": [
+    -0.0012951996825290046,
+    0.00014839979655372295
+   ],
+   "half_width": 0.0007217997395413638,
+   "reading": "indistinguishable"
+  }
+ },
+ "diagnostics": {
+  "read": "first",
+  "aging": {
+   "divergences": 0,
+   "divergences_per_chain": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "max_treedepth_hits": 0,
+   "max_rhat": 1.00456,
+   "min_ess_bulk": 1274.36,
+   "nan_diagnostic_constant": 2,
+   "nan_diagnostic_varying": 0,
+   "seconds": 191.4,
+   "fallback": false,
+   "valid": true
+  },
+  "no_aging": {
+   "divergences": 0,
+   "divergences_per_chain": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "max_treedepth_hits": 0,
+   "max_rhat": 1.00705,
+   "min_ess_bulk": 1269.91,
+   "nan_diagnostic_constant": 2,
+   "nan_diagnostic_varying": 0,
+   "seconds": 160.8,
+   "fallback": false,
+   "valid": true
+  }
+ }
+}

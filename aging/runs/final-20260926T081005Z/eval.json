@@ -1,0 +1,4102 @@
+[
+ {
+  "player_id": 455117,
+  "player_name": "Martín Maldonado",
+  "age": 38,
+  "pa": 161,
+  "target": -0.06250950496121183,
+  "marcel": -0.05636221579346595,
+  "last_obs": 545,
+  "target_age_idx": 20
+ },
+ {
+  "player_id": 456781,
+  "player_name": "Donovan Solano",
+  "age": 37,
+  "pa": 179,
+  "target": -0.036435504961211784,
+  "marcel": 0.0065541466149933725,
+  "last_obs": 616,
+  "target_age_idx": 19
+ },
+ {
+  "player_id": 457705,
+  "player_name": "Andrew McCutchen",
+  "age": 38,
+  "pa": 551,
+  "target": -0.004171504961211825,
+  "marcel": 0.0029002744367490063,
+  "last_obs": 636,
+  "target_age_idx": 20
+ },
+ {
+  "player_id": 457759,
+  "player_name": "Justin Turner",
+  "age": 40,
+  "pa": 191,
+  "target": -0.04514850496121181,
+  "marcel": 0.009640851106841819,
+  "last_obs": 665,
+  "target_age_idx": 22
+ },
+ {
+  "player_id": 467793,
+  "player_name": "Carlos Santana",
+  "age": 39,
+  "pa": 474,
+  "target": -0.028723504961211788,
+  "marcel": -0.0025262076685538815,
+  "last_obs": 856,
+  "target_age_idx": 21
+ },
+ {
+  "player_id": 500743,
+  "player_name": "Miguel Rojas",
+  "age": 36,
+  "pa": 317,
+  "target": -0.0009465049612117915,
+  "marcel": -0.025060145834331304,
+  "last_obs": 1092,
+  "target_age_idx": 18
+ },
+ {
+  "player_id": 502054,
+  "player_name": "Tommy Pham",
+  "age": 37,
+  "pa": 449,
+  "target": -0.005498504961211792,
+  "marcel": -0.009779051274072526,
+  "last_obs": 1168,
+  "target_age_idx": 19
+ },
+ {
+  "player_id": 502671,
+  "player_name": "Paul Goldschmidt",
+  "age": 37,
+  "pa": 534,
+  "target": 0.003013495038788172,
+  "marcel": 0.024414438188615828,
+  "last_obs": 1261,
+  "target_age_idx": 19
+ },
+ {
+  "player_id": 514888,
+  "player_name": "Jose Altuve",
+  "age": 35,
+  "pa": 654,
+  "target": 0.01825949503878821,
+  "marcel": 0.042627019044332304,
+  "last_obs": 1307,
+  "target_age_idx": 17
+ },
+ {
+  "player_id": 516782,
+  "player_name": "Starling Marte",
+  "age": 36,
+  "pa": 329,
+  "target": 0.01309649503878818,
+  "marcel": -0.003591464971852587,
+  "last_obs": 1346,
+  "target_age_idx": 18
+ },
+ {
+  "player_id": 518595,
+  "player_name": "Travis d'Arnaud",
+  "age": 36,
+  "pa": 231,
+  "target": -0.050443504961211805,
+  "marcel": -0.0005885073531032847,
+  "last_obs": 1394,
+  "target_age_idx": 18
+ },
+ {
+  "player_id": 518692,
+  "player_name": "Freddie Freeman",
+  "age": 35,
+  "pa": 627,
+  "target": 0.05663149503878817,
+  "marcel": 0.059000606776775155,
+  "last_obs": 1430,
+  "target_age_idx": 17
+ },
+ {
+  "player_id": 518934,
+  "player_name": "DJ LeMahieu",
+  "age": 36,
+  "pa": 142,
+  "target": -0.009567504961211781,
+  "marcel": -0.015752249440876054,
+  "last_obs": 1470,
+  "target_age_idx": 18
+ },
+ {
+  "player_id": 519317,
+  "player_name": "Giancarlo Stanton",
+  "age": 35,
+  "pa": 281,
+  "target": 0.0817784950387882,
+  "marcel": -0.0007876332018449395,
+  "last_obs": 1567,
+  "target_age_idx": 17
+ },
+ {
+  "player_id": 521692,
+  "player_name": "Salvador Perez",
+  "age": 35,
+  "pa": 641,
+  "target": -0.0025555049612118186,
+  "marcel": 0.0019566408189937157,
+  "last_obs": 1602,
+  "target_age_idx": 17
+ },
+ {
+  "player_id": 527038,
+  "player_name": "Wilmer Flores",
+  "age": 33,
+  "pa": 463,
+  "target": -0.011013504961211784,
+  "marcel": 0.0022887029511780566,
+  "last_obs": 1619,
+  "target_age_idx": 15
+ },
+ {
+  "player_id": 542303,
+  "player_name": "Marcell Ozuna",
+  "age": 34,
+  "pa": 592,
+  "target": 0.020980495038788183,
+  "marcel": 0.04379728640809322,
+  "last_obs": 1687,
+  "target_age_idx": 16
+ },
+ {
+  "player_id": 542932,
+  "player_name": "Jon Berti",
+  "age": 35,
+  "pa": 107,
+  "target": -0.08719450496121181,
+  "marcel": -0.007078291657450997,
+  "last_obs": 1747,
+  "target_age_idx": 17
+ },
+ {
+  "player_id": 543309,
+  "player_name": "Kyle Higashioka",
+  "age": 35,
+  "pa": 327,
+  "target": -0.012577504961211794,
+  "marcel": -0.015144616058388627,
+  "last_obs": 1872,
+  "target_age_idx": 17
+ },
+ {
+  "player_id": 543510,
+  "player_name": "James McCann",
+  "age": 35,
+  "pa": 137,
+  "target": 0.015211495038788214,
+  "marcel": -0.031021952522709118,
+  "last_obs": 1924,
+  "target_age_idx": 17
+ },
+ {
+  "player_id": 543760,
+  "player_name": "Marcus Semien",
+  "age": 34,
+  "pa": 534,
+  "target": -0.01829450496121182,
+  "marcel": 0.0060221641580993635,
+  "last_obs": 1969,
+  "target_age_idx": 16
+ },
+ {
+  "player_id": 543807,
+  "player_name": "George Springer",
+  "age": 35,
+  "pa": 586,
+  "target": 0.09479449503878817,
+  "marcel": -0.0010177955975887998,
+  "last_obs": 1991,
+  "target_age_idx": 17
+ },
+ {
+  "player_id": 543877,
+  "player_name": "Christian Vázquez",
+  "age": 34,
+  "pa": 214,
+  "target": -0.06471350496121181,
+  "marcel": -0.03500769981815016,
+  "last_obs": 2007,
+  "target_age_idx": 16
+ },
+ {
+  "player_id": 545121,
+  "player_name": "Ildemaro Vargas",
+  "age": 33,
+  "pa": 121,
+  "target": -0.02069650496121178,
+  "marcel": -0.024415920357151955,
+  "last_obs": 2044,
+  "target_age_idx": 15
+ },
+ {
+  "player_id": 545341,
+  "player_name": "Randal Grichuk",
+  "age": 33,
+  "pa": 293,
+  "target": -0.02452650496121178,
+  "marcel": 0.016154447614006695,
+  "last_obs": 2060,
+  "target_age_idx": 15
+ },
+ {
+  "player_id": 545361,
+  "player_name": "Mike Trout",
+  "age": 33,
+  "pa": 556,
+  "target": 0.03005649503878821,
+  "marcel": 0.051728203859244426,
+  "last_obs": 2087,
+  "target_age_idx": 15
+ },
+ {
+  "player_id": 547180,
+  "player_name": "Bryce Harper",
+  "age": 32,
+  "pa": 580,
+  "target": 0.047866495038788204,
+  "marcel": 0.05305843188500986,
+  "last_obs": 2135,
+  "target_age_idx": 14
+ },
+ {
+  "player_id": 553869,
+  "player_name": "Elias Díaz",
+  "age": 34,
+  "pa": 283,
+  "target": -0.043915504961211826,
+  "marcel": -0.012883322004993258,
+  "last_obs": 2175,
+  "target_age_idx": 16
+ },
+ {
+  "player_id": 553993,
+  "player_name": "Eugenio Suárez",
+  "age": 33,
+  "pa": 657,
+  "target": 0.0336774950387882,
+  "marcel": 0.011233584243642791,
+  "last_obs": 2204,
+  "target_age_idx": 15
+ },
+ {
+  "player_id": 570482,
+  "player_name": "Gio Urshela",
+  "age": 33,
+  "pa": 197,
+  "target": -0.04228750496121181,
+  "marcel": -0.010212191878208265,
+  "last_obs": 2236,
+  "target_age_idx": 15
+ },
+ {
+  "player_id": 571448,
+  "player_name": "Nolan Arenado",
+  "age": 34,
+  "pa": 436,
+  "target": -0.026513504961211798,
+  "marcel": 0.014044502316343466,
+  "last_obs": 2285,
+  "target_age_idx": 16
+ },
+ {
+  "player_id": 571657,
+  "player_name": "Kyle Farmer",
+  "age": 34,
+  "pa": 300,
+  "target": -0.030933504961211777,
+  "marcel": -0.01099602520876053,
+  "last_obs": 2321,
+  "target_age_idx": 16
+ },
+ {
+  "player_id": 571771,
+  "player_name": "Enrique Hernández",
+  "age": 33,
+  "pa": 256,
+  "target": -0.04476050496121181,
+  "marcel": -0.02839895673285564,
+  "last_obs": 2368,
+  "target_age_idx": 15
+ },
+ {
+  "player_id": 571970,
+  "player_name": "Max Muncy",
+  "age": 34,
+  "pa": 388,
+  "target": 0.0529994950387882,
+  "marcel": 0.017313465017852137,
+  "last_obs": 2419,
+  "target_age_idx": 16
+ },
+ {
+  "player_id": 572191,
+  "player_name": "Michael A. Taylor",
+  "age": 34,
+  "pa": 325,
+  "target": -0.04283450496121183,
+  "marcel": -0.028592990181683153,
+  "last_obs": 2514,
+  "target_age_idx": 16
+ },
+ {
+  "player_id": 572233,
+  "player_name": "Christian Walker",
+  "age": 34,
+  "pa": 640,
+  "target": -0.00273350496121183,
+  "marcel": 0.024019142537212435,
+  "last_obs": 2539,
+  "target_age_idx": 16
+ },
+ {
+  "player_id": 573262,
+  "player_name": "Mike Yastrzemski",
+  "age": 34,
+  "pa": 558,
+  "target": 0.007536495038788171,
+  "marcel": 0.0007588866042338993,
+  "last_obs": 2610,
+  "target_age_idx": 16
+ },
+ {
+  "player_id": 575929,
+  "player_name": "Willson Contreras",
+  "age": 33,
+  "pa": 563,
+  "target": 0.03116449503878821,
+  "marcel": 0.035356332031732385,
+  "last_obs": 2625,
+  "target_age_idx": 15
+ },
+ {
+  "player_id": 578428,
+  "player_name": "Jose Iglesias",
+  "age": 35,
+  "pa": 343,
+  "target": -0.044808504961211804,
+  "marcel": 0.01314637813099212,
+  "last_obs": 2641,
+  "target_age_idx": 17
+ },
+ {
+  "player_id": 592192,
+  "player_name": "Mark Canha",
+  "age": 36,
+  "pa": 125,
+  "target": -0.0695085049612118,
+  "marcel": 0.004780573030511326,
+  "last_obs": 2699,
+  "target_age_idx": 18
+ },
+ {
+  "player_id": 592206,
+  "player_name": "Nick Castellanos",
+  "age": 33,
+  "pa": 589,
+  "target": -0.012720504961211798,
+  "marcel": 0.003942209767545668,
+  "last_obs": 2719,
+  "target_age_idx": 15
+ },
+ {
+  "player_id": 592450,
+  "player_name": "Aaron Judge",
+  "age": 33,
+  "pa": 679,
+  "target": 0.14967349503878818,
+  "marcel": 0.1196713992219432,
+  "last_obs": 2791,
+  "target_age_idx": 15
+ },
+ {
+  "player_id": 592518,
+  "player_name": "Manny Machado",
+  "age": 32,
+  "pa": 678,
+  "target": 0.02805649503878821,
+  "marcel": 0.02785132677219787,
+  "last_obs": 2801,
+  "target_age_idx": 14
+ },
+ {
+  "player_id": 592626,
+  "player_name": "Joc Pederson",
+  "age": 33,
+  "pa": 306,
+  "target": -0.03680350496121182,
+  "marcel": 0.039958058379763794,
+  "last_obs": 2832,
+  "target_age_idx": 15
+ },
+ {
+  "player_id": 592663,
+  "player_name": "J.T. Realmuto",
+  "age": 34,
+  "pa": 550,
+  "target": -0.006508504961211803,
+  "marcel": 0.011845034821658995,
+  "last_obs": 2849,
+  "target_age_idx": 16
+ },
+ {
+  "player_id": 592669,
+  "player_name": "Hunter Renfroe",
+  "age": 33,
+  "pa": 108,
+  "target": -0.09428050496121179,
+  "marcel": -0.0013013935796795661,
+  "last_obs": 2858,
+  "target_age_idx": 15
+ },
+ {
+  "player_id": 592885,
+  "player_name": "Christian Yelich",
+  "age": 33,
+  "pa": 644,
+  "target": 0.030065495038788193,
+  "marcel": 0.030326537035509582,
+  "last_obs": 2916,
+  "target_age_idx": 15
+ },
+ {
+  "player_id": 593428,
+  "player_name": "Xander Bogaerts",
+  "age": 32,
+  "pa": 552,
+  "target": 9.049503878821863e-05,
+  "marcel": 0.014593886301069836,
+  "last_obs": 2935,
+  "target_age_idx": 14
+ },
+ {
+  "player_id": 593871,
+  "player_name": "Jorge Polanco",
+  "age": 31,
+  "pa": 524,
+  "target": 0.036775495038788186,
+  "marcel": -0.000927143599109892,
+  "last_obs": 2977,
+  "target_age_idx": 13
+ },
+ {
+  "player_id": 595777,
+  "player_name": "Jurickson Profar",
+  "age": 32,
+  "pa": 371,
+  "target": 0.03303449503878819,
+  "marcel": 0.017426320727859657,
+  "last_obs": 3114,
+  "target_age_idx": 14
+ },
+ {
+  "player_id": 595879,
+  "player_name": "Javier Báez",
+  "age": 32,
+  "pa": 437,
+  "target": -0.01971750496121183,
+  "marcel": -0.04537628530454613,
+  "last_obs": 3124,
+  "target_age_idx": 14
+ },
+ {
+  "player_id": 595978,
+  "player_name": "Austin Hedges",
+  "age": 32,
+  "pa": 180,
+  "target": -0.07382050496121181,
+  "marcel": -0.07213215847903795,
+  "last_obs": 3157,
+  "target_age_idx": 14
+ },
+ {
+  "player_id": 596019,
+  "player_name": "Francisco Lindor",
+  "age": 31,
+  "pa": 732,
+  "target": 0.03708349503878822,
+  "marcel": 0.03197356310391891,
+  "last_obs": 3172,
+  "target_age_idx": 13
+ },
+ {
+  "player_id": 596103,
+  "player_name": "Austin Slater",
+  "age": 32,
+  "pa": 160,
+  "target": -0.032784504961211824,
+  "marcel": -0.001788286910923198,
+  "last_obs": 3191,
+  "target_age_idx": 14
+ },
+ {
+  "player_id": 596115,
+  "player_name": "Trevor Story",
+  "age": 32,
+  "pa": 654,
+  "target": 0.007211495038788207,
+  "marcel": -0.012533908226172896,
+  "last_obs": 3204,
+  "target_age_idx": 14
+ },
+ {
+  "player_id": 596142,
+  "player_name": "Gary Sánchez",
+  "age": 32,
+  "pa": 101,
+  "target": -0.0019895049612118076,
+  "marcel": -0.006757988888077493,
+  "last_obs": 3234,
+  "target_age_idx": 14
+ },
+ {
+  "player_id": 596146,
+  "player_name": "Max Kepler",
+  "age": 32,
+  "pa": 474,
+  "target": -0.01260050496121179,
+  "marcel": 0.00010105535830917667,
+  "last_obs": 3254,
+  "target_age_idx": 14
+ },
+ {
+  "player_id": 602104,
+  "player_name": "Ramón Urías",
+  "age": 31,
+  "pa": 391,
+  "target": -0.021266504961211796,
+  "marcel": 0.0007019049901283436,
+  "last_obs": 3346,
+  "target_age_idx": 13
+ },
+ {
+  "player_id": 605137,
+  "player_name": "Josh Bell",
+  "age": 32,
+  "pa": 533,
+  "target": 0.010786495038788202,
+  "marcel": 0.008350584606597267,
+  "last_obs": 3391,
+  "target_age_idx": 14
+ },
+ {
+  "player_id": 605141,
+  "player_name": "Mookie Betts",
+  "age": 32,
+  "pa": 663,
+  "target": 0.00474449503878821,
+  "marcel": 0.06161781510643116,
+  "last_obs": 3401,
+  "target_age_idx": 14
+ },
+ {
+  "player_id": 605170,
+  "player_name": "Victor Caratini",
+  "age": 31,
+  "pa": 386,
+  "target": 0.005195495038788189,
+  "marcel": -0.003202357580054327,
+  "last_obs": 3409,
+  "target_age_idx": 13
+ },
+ {
+  "player_id": 605361,
+  "player_name": "Nick Martini",
+  "age": 35,
+  "pa": 111,
+  "target": -0.05436750496121179,
+  "marcel": -0.007920761944152366,
+  "last_obs": 3452,
+  "target_age_idx": 17
+ },
+ {
+  "player_id": 606115,
+  "player_name": "Orlando Arcia",
+  "age": 30,
+  "pa": 214,
+  "target": -0.0801675049612118,
+  "marcel": -0.014947629875037671,
+  "last_obs": 3519,
+  "target_age_idx": 12
+ },
+ {
+  "player_id": 606192,
+  "player_name": "Teoscar Hernández",
+  "age": 32,
+  "pa": 546,
+  "target": 0.0018034950387881832,
+  "marcel": 0.021755951146725683,
+  "last_obs": 3541,
+  "target_age_idx": 14
+ },
+ {
+  "player_id": 606466,
+  "player_name": "Ketel Marte",
+  "age": 31,
+  "pa": 556,
+  "target": 0.06744849503878819,
+  "marcel": 0.04054878716000804,
+  "last_obs": 3562,
+  "target_age_idx": 13
+ },
+ {
+  "player_id": 607043,
+  "player_name": "Brandon Nimmo",
+  "age": 32,
+  "pa": 652,
+  "target": 0.015642495038788173,
+  "marcel": 0.021901594297429994,
+  "last_obs": 3586,
+  "target_age_idx": 14
+ },
+ {
+  "player_id": 607208,
+  "player_name": "Trea Turner",
+  "age": 32,
+  "pa": 639,
+  "target": 0.03846749503878821,
+  "marcel": 0.023154192362334236,
+  "last_obs": 3607,
+  "target_age_idx": 14
+ },
+ {
+  "player_id": 607732,
+  "player_name": "Jacob Stallings",
+  "age": 35,
+  "pa": 129,
+  "target": -0.1417745049612118,
+  "marcel": -0.017759194584296534,
+  "last_obs": 3664,
+  "target_age_idx": 17
+ },
+ {
+  "player_id": 608070,
+  "player_name": "José Ramírez",
+  "age": 32,
+  "pa": 673,
+  "target": 0.046544495038788214,
+  "marcel": 0.035971952896242054,
+  "last_obs": 3684,
+  "target_age_idx": 14
+ },
+ {
+  "player_id": 608324,
+  "player_name": "Alex Bregman",
+  "age": 31,
+  "pa": 495,
+  "target": 0.04249649503878822,
+  "marcel": 0.02549777305619455,
+  "last_obs": 3693,
+  "target_age_idx": 13
+ },
+ {
+  "player_id": 608348,
+  "player_name": "Carson Kelly",
+  "age": 30,
+  "pa": 421,
+  "target": 0.01850849503878821,
+  "marcel": -0.020111221112818933,
+  "last_obs": 3715,
+  "target_age_idx": 12
+ },
+ {
+  "player_id": 608369,
+  "player_name": "Corey Seager",
+  "age": 31,
+  "pa": 445,
+  "target": 0.052342495038788184,
+  "marcel": 0.04817192966593287,
+  "last_obs": 3732,
+  "target_age_idx": 13
+ },
+ {
+  "player_id": 608701,
+  "player_name": "Rob Refsnyder",
+  "age": 34,
+  "pa": 209,
+  "target": 0.0460054950387882,
+  "marcel": 0.020395006027837337,
+  "last_obs": 3805,
+  "target_age_idx": 16
+ },
+ {
+  "player_id": 609280,
+  "player_name": "Miguel Andujar",
+  "age": 30,
+  "pa": 341,
+  "target": 0.040725495038788195,
+  "marcel": -0.009025047844797851,
+  "last_obs": 3831,
+  "target_age_idx": 12
+ },
+ {
+  "player_id": 620443,
+  "player_name": "Luis Torrens",
+  "age": 29,
+  "pa": 283,
+  "target": -0.0354555049612118,
+  "marcel": -0.016061724725986715,
+  "last_obs": 3863,
+  "target_age_idx": 11
+ },
+ {
+  "player_id": 621020,
+  "player_name": "Dansby Swanson",
+  "age": 31,
+  "pa": 645,
+  "target": -0.003589504961211798,
+  "marcel": 0.00522135614429442,
+  "last_obs": 3892,
+  "target_age_idx": 13
+ },
+ {
+  "player_id": 621028,
+  "player_name": "Kevin Newman",
+  "age": 31,
+  "pa": 116,
+  "target": -0.1040905049612118,
+  "marcel": -0.012052151729543714,
+  "last_obs": 3899,
+  "target_age_idx": 13
+ },
+ {
+  "player_id": 621035,
+  "player_name": "Chris Taylor",
+  "age": 34,
+  "pa": 125,
+  "target": -0.06335150496121181,
+  "marcel": -0.014913611026619145,
+  "last_obs": 3909,
+  "target_age_idx": 16
+ },
+ {
+  "player_id": 621043,
+  "player_name": "Carlos Correa",
+  "age": 30,
+  "pa": 584,
+  "target": 0.009104495038788185,
+  "marcel": 0.028180479249238666,
+  "last_obs": 3919,
+  "target_age_idx": 12
+ },
+ {
+  "player_id": 621438,
+  "player_name": "Tyrone Taylor",
+  "age": 31,
+  "pa": 341,
+  "target": -0.048733504961211815,
+  "marcel": -0.0060066218408151295,
+  "last_obs": 3940,
+  "target_age_idx": 13
+ },
+ {
+  "player_id": 621439,
+  "player_name": "Byron Buxton",
+  "age": 31,
+  "pa": 542,
+  "target": 0.05352949503878818,
+  "marcel": 0.024486054959664105,
+  "last_obs": 3950,
+  "target_age_idx": 13
+ },
+ {
+  "player_id": 621493,
+  "player_name": "Taylor Ward",
+  "age": 31,
+  "pa": 663,
+  "target": 0.02565349503878822,
+  "marcel": 0.017890097136918692,
+  "last_obs": 3986,
+  "target_age_idx": 13
+ },
+ {
+  "player_id": 621566,
+  "player_name": "Matt Olson",
+  "age": 31,
+  "pa": 724,
+  "target": 0.05323149503878821,
+  "marcel": 0.044001406043644054,
+  "last_obs": 4039,
+  "target_age_idx": 13
+ },
+ {
+  "player_id": 623168,
+  "player_name": "Tyler Heineman",
+  "age": 34,
+  "pa": 174,
+  "target": 0.028311495038788215,
+  "marcel": -0.023146360956739054,
+  "last_obs": 4120,
+  "target_age_idx": 16
+ },
+ {
+  "player_id": 623993,
+  "player_name": "Anthony Santander",
+  "age": 30,
+  "pa": 221,
+  "target": -0.05810950496121181,
+  "marcel": 0.023651762261247156,
+  "last_obs": 4161,
+  "target_age_idx": 12
+ },
+ {
+  "player_id": 624413,
+  "player_name": "Pete Alonso",
+  "age": 30,
+  "pa": 709,
+  "target": 0.05523849503878819,
+  "marcel": 0.029934726027847802,
+  "last_obs": 4171,
+  "target_age_idx": 12
+ },
+ {
+  "player_id": 624424,
+  "player_name": "Michael Conforto",
+  "age": 32,
+  "pa": 486,
+  "target": -0.02562050496121182,
+  "marcel": 0.0031677928098400865,
+  "last_obs": 4196,
+  "target_age_idx": 14
+ },
+ {
+  "player_id": 624428,
+  "player_name": "Adam Frazier",
+  "age": 33,
+  "pa": 459,
+  "target": -0.01343450496121179,
+  "marcel": -0.029844403916836182,
+  "last_obs": 4205,
+  "target_age_idx": 15
+ },
+ {
+  "player_id": 624431,
+  "player_name": "Jose Trevino",
+  "age": 32,
+  "pa": 302,
+  "target": -0.04232150496121179,
+  "marcel": -0.025373008936670993,
+  "last_obs": 4212,
+  "target_age_idx": 14
+ },
+ {
+  "player_id": 624512,
+  "player_name": "Reese McGuire",
+  "age": 30,
+  "pa": 140,
+  "target": -0.022650504961211793,
+  "marcel": -0.02085119734109303,
+  "last_obs": 4225,
+  "target_age_idx": 12
+ },
+ {
+  "player_id": 624585,
+  "player_name": "Jorge Soler",
+  "age": 33,
+  "pa": 315,
+  "target": -0.01536050496121183,
+  "marcel": 0.020394098934854943,
+  "last_obs": 4243,
+  "target_age_idx": 15
+ },
+ {
+  "player_id": 624641,
+  "player_name": "Edmundo Sosa",
+  "age": 29,
+  "pa": 261,
+  "target": 0.018893495038788177,
+  "marcel": -0.003488615073300394,
+  "last_obs": 4250,
+  "target_age_idx": 11
+ },
+ {
+  "player_id": 628451,
+  "player_name": "Andy Ibáñez",
+  "age": 32,
+  "pa": 193,
+  "target": -0.023853504961211802,
+  "marcel": -0.01392277247218865,
+  "last_obs": 4274,
+  "target_age_idx": 14
+ },
+ {
+  "player_id": 630105,
+  "player_name": "Jake Cronenworth",
+  "age": 31,
+  "pa": 515,
+  "target": 0.01998849503878819,
+  "marcel": -0.0022603421038838167,
+  "last_obs": 4279,
+  "target_age_idx": 13
+ },
+ {
+  "player_id": 641343,
+  "player_name": "Jake Bauers",
+  "age": 29,
+  "pa": 218,
+  "target": 0.019782495038788206,
+  "marcel": -0.012592365993957355,
+  "last_obs": 4336,
+  "target_age_idx": 11
+ },
+ {
+  "player_id": 641355,
+  "player_name": "Cody Bellinger",
+  "age": 29,
+  "pa": 656,
+  "target": 0.034377495038788175,
+  "marcel": 0.013362167152911053,
+  "last_obs": 4344,
+  "target_age_idx": 11
+ },
+ {
+  "player_id": 641487,
+  "player_name": "J.P. Crawford",
+  "age": 30,
+  "pa": 654,
+  "target": 0.009340495038788199,
+  "marcel": 0.0035740690554966204,
+  "last_obs": 4368,
+  "target_age_idx": 12
+ },
+ {
+  "player_id": 641584,
+  "player_name": "Jake Fraley",
+  "age": 30,
+  "pa": 217,
+  "target": 0.002485495038788199,
+  "marcel": 0.011833057743786457,
+  "last_obs": 4409,
+  "target_age_idx": 12
+ },
+ {
+  "player_id": 641598,
+  "player_name": "Mitch Garver",
+  "age": 34,
+  "pa": 290,
+  "target": -0.0295945049612118,
+  "marcel": -0.0021723833823879546,
+  "last_obs": 4417,
+  "target_age_idx": 16
+ },
+ {
+  "player_id": 641680,
+  "player_name": "Jonah Heim",
+  "age": 30,
+  "pa": 433,
+  "target": -0.04724050496121179,
+  "marcel": -0.01588187246968925,
+  "last_obs": 4436,
+  "target_age_idx": 12
+ },
+ {
+  "player_id": 641857,
+  "player_name": "Ryan McMahon",
+  "age": 30,
+  "pa": 586,
+  "target": -0.006955504961211778,
+  "marcel": 0.006104925447084464,
+  "last_obs": 4481,
+  "target_age_idx": 12
+ },
+ {
+  "player_id": 641933,
+  "player_name": "Tyler O'Neill",
+  "age": 30,
+  "pa": 209,
+  "target": -0.016131504961211796,
+  "marcel": 0.0177225251657957,
+  "last_obs": 4498,
+  "target_age_idx": 12
+ },
+ {
+  "player_id": 641943,
+  "player_name": "Joshua Palacios",
+  "age": 29,
+  "pa": 145,
+  "target": -0.04175950496121178,
+  "marcel": -0.01321889968952955,
+  "last_obs": 4502,
+  "target_age_idx": 11
+ },
+ {
+  "player_id": 642086,
+  "player_name": "Dominic Smith",
+  "age": 30,
+  "pa": 225,
+  "target": 0.012260495038788177,
+  "marcel": -0.011844491586733064,
+  "last_obs": 4519,
+  "target_age_idx": 12
+ },
+ {
+  "player_id": 642133,
+  "player_name": "Rowdy Tellez",
+  "age": 30,
+  "pa": 312,
+  "target": -0.005852504961211813,
+  "marcel": -0.00567640310516665,
+  "last_obs": 4527,
+  "target_age_idx": 12
+ },
+ {
+  "player_id": 642136,
+  "player_name": "Matt Thaiss",
+  "age": 30,
+  "pa": 190,
+  "target": -0.015392504961211806,
+  "marcel": -0.01656330024192948,
+  "last_obs": 4533,
+  "target_age_idx": 12
+ },
+ {
+  "player_id": 642180,
+  "player_name": "Tyler Wade",
+  "age": 30,
+  "pa": 127,
+  "target": -0.050648504961211815,
+  "marcel": -0.035295933219938236,
+  "last_obs": 4554,
+  "target_age_idx": 12
+ },
+ {
+  "player_id": 642201,
+  "player_name": "Eli White",
+  "age": 31,
+  "pa": 271,
+  "target": -0.023447504961211785,
+  "marcel": -0.013706064771900728,
+  "last_obs": 4560,
+  "target_age_idx": 13
+ },
+ {
+  "player_id": 642215,
+  "player_name": "Weston Wilson",
+  "age": 30,
+  "pa": 125,
+  "target": -0.025306504961211784,
+  "marcel": 0.01829341405506335,
+  "last_obs": 4565,
+  "target_age_idx": 12
+ },
+ {
+  "player_id": 642708,
+  "player_name": "Amed Rosario",
+  "age": 29,
+  "pa": 191,
+  "target": 0.008367495038788197,
+  "marcel": -0.008877499318084514,
+  "last_obs": 4596,
+  "target_age_idx": 11
+ },
+ {
+  "player_id": 642715,
+  "player_name": "Willy Adames",
+  "age": 29,
+  "pa": 686,
+  "target": 0.0076794950387881755,
+  "marcel": 0.013151587810339371,
+  "last_obs": 4603,
+  "target_age_idx": 11
+ },
+ {
+  "player_id": 642731,
+  "player_name": "Thairo Estrada",
+  "age": 29,
+  "pa": 165,
+  "target": -0.02947450496121179,
+  "marcel": -0.013805210875250495,
+  "last_obs": 4616,
+  "target_age_idx": 11
+ },
+ {
+  "player_id": 642851,
+  "player_name": "Austin Wynns",
+  "age": 34,
+  "pa": 110,
+  "target": 0.051486495038788216,
+  "marcel": -0.020175669309549116,
+  "last_obs": 4626,
+  "target_age_idx": 16
+ },
+ {
+  "player_id": 643217,
+  "player_name": "Andrew Benintendi",
+  "age": 30,
+  "pa": 470,
+  "target": 0.0037814950387882185,
+  "marcel": -0.004773540928683095,
+  "last_obs": 4635,
+  "target_age_idx": 12
+ },
+ {
+  "player_id": 643289,
+  "player_name": "Mauricio Dubón",
+  "age": 30,
+  "pa": 398,
+  "target": -0.030320504961211803,
+  "marcel": -0.019844301219542504,
+  "last_obs": 4653,
+  "target_age_idx": 12
+ },
+ {
+  "player_id": 643376,
+  "player_name": "Danny Jansen",
+  "age": 30,
+  "pa": 337,
+  "target": 0.004964495038788208,
+  "marcel": 0.006246011910128746,
+  "last_obs": 4663,
+  "target_age_idx": 12
+ },
+ {
+  "player_id": 643396,
+  "player_name": "Isiah Kiner-Falefa",
+  "age": 30,
+  "pa": 459,
+  "target": -0.03434250496121183,
+  "marcel": -0.017710673693052403,
+  "last_obs": 4679,
+  "target_age_idx": 12
+ },
+ {
+  "player_id": 643446,
+  "player_name": "Jeff McNeil",
+  "age": 33,
+  "pa": 462,
+  "target": 0.010627495038788182,
+  "marcel": 0.005131068970383679,
+  "last_obs": 4692,
+  "target_age_idx": 15
+ },
+ {
+  "player_id": 643565,
+  "player_name": "Mike Tauchman",
+  "age": 34,
+  "pa": 385,
+  "target": 0.02206249503878821,
+  "marcel": 0.005061881540824709,
+  "last_obs": 4702,
+  "target_age_idx": 16
+ },
+ {
+  "player_id": 645277,
+  "player_name": "Ozzie Albies",
+  "age": 28,
+  "pa": 667,
+  "target": -0.018556504961211806,
+  "marcel": 0.015809500805591403,
+  "last_obs": 4726,
+  "target_age_idx": 10
+ },
+ {
+  "player_id": 645302,
+  "player_name": "Victor Robles",
+  "age": 28,
+  "pa": 114,
+  "target": -0.0453875049612118,
+  "marcel": 0.006184571328471666,
+  "last_obs": 4734,
+  "target_age_idx": 10
+ },
+ {
+  "player_id": 645444,
+  "player_name": "Jose Herrera",
+  "age": 28,
+  "pa": 204,
+  "target": -0.0617595049612118,
+  "marcel": -0.03220325235779675,
+  "last_obs": 4740,
+  "target_age_idx": 10
+ },
+ {
+  "player_id": 646240,
+  "player_name": "Rafael Devers",
+  "age": 28,
+  "pa": 729,
+  "target": 0.05210849503878817,
+  "marcel": 0.04651994262609077,
+  "last_obs": 4756,
+  "target_age_idx": 10
+ },
+ {
+  "player_id": 647304,
+  "player_name": "Josh Naylor",
+  "age": 28,
+  "pa": 604,
+  "target": 0.03758949503878822,
+  "marcel": 0.023640652725401945,
+  "last_obs": 4762,
+  "target_age_idx": 10
+ },
+ {
+  "player_id": 647351,
+  "player_name": "Abraham Toro",
+  "age": 28,
+  "pa": 284,
+  "target": -0.027158504961211805,
+  "marcel": -0.0217336544674796,
+  "last_obs": 4768,
+  "target_age_idx": 10
+ },
+ {
+  "player_id": 649966,
+  "player_name": "Luis Urías",
+  "age": 28,
+  "pa": 330,
+  "target": -0.020023504961211802,
+  "marcel": 0.004158070226295496,
+  "last_obs": 4785,
+  "target_age_idx": 10
+ },
+ {
+  "player_id": 650333,
+  "player_name": "Luis Arraez",
+  "age": 28,
+  "pa": 675,
+  "target": 0.0003324950387881831,
+  "marcel": 0.02906666941968955,
+  "last_obs": 4794,
+  "target_age_idx": 10
+ },
+ {
+  "player_id": 650402,
+  "player_name": "Gleyber Torres",
+  "age": 28,
+  "pa": 628,
+  "target": 0.018562495038788207,
+  "marcel": 0.01458147294424883,
+  "last_obs": 4808,
+  "target_age_idx": 10
+ },
+ {
+  "player_id": 650489,
+  "player_name": "Willi Castro",
+  "age": 28,
+  "pa": 454,
+  "target": -0.01142750496121181,
+  "marcel": 0.002989823937307512,
+  "last_obs": 4814,
+  "target_age_idx": 10
+ },
+ {
+  "player_id": 650490,
+  "player_name": "Yandy Díaz",
+  "age": 33,
+  "pa": 651,
+  "target": 0.05119349503878817,
+  "marcel": 0.038390915975520745,
+  "last_obs": 4822,
+  "target_age_idx": 15
+ },
+ {
+  "player_id": 650859,
+  "player_name": "Luis Rengifo",
+  "age": 28,
+  "pa": 541,
+  "target": -0.03827250496121182,
+  "marcel": 0.015152466860806013,
+  "last_obs": 4837,
+  "target_age_idx": 10
+ },
+ {
+  "player_id": 650968,
+  "player_name": "Yohel Pozo",
+  "age": 28,
+  "pa": 168,
+  "target": -0.037975504961211826,
+  "marcel": 0.0018767487671453864,
+  "last_obs": 4841,
+  "target_age_idx": 10
+ },
+ {
+  "player_id": 655316,
+  "player_name": "Andruw Monasterio",
+  "age": 28,
+  "pa": 135,
+  "target": 0.014549495038788218,
+  "marcel": -0.014666989163160837,
+  "last_obs": 4843,
+  "target_age_idx": 10
+ },
+ {
+  "player_id": 656180,
+  "player_name": "Riley Adams",
+  "age": 29,
+  "pa": 286,
+  "target": -0.0631245049612118,
+  "marcel": -0.011828547657350086,
+  "last_obs": 4849,
+  "target_age_idx": 11
+ },
+ {
+  "player_id": 656305,
+  "player_name": "Matt Chapman",
+  "age": 32,
+  "pa": 535,
+  "target": 0.0231354950387882,
+  "marcel": 0.015464287159408285,
+  "last_obs": 4870,
+  "target_age_idx": 14
+ },
+ {
+  "player_id": 656537,
+  "player_name": "Derek Hill",
+  "age": 29,
+  "pa": 149,
+  "target": -0.04148550496121178,
+  "marcel": -0.021503256925725744,
+  "last_obs": 4910,
+  "target_age_idx": 11
+ },
+ {
+  "player_id": 656555,
+  "player_name": "Rhys Hoskins",
+  "age": 32,
+  "pa": 328,
+  "target": 0.011258495038788174,
+  "marcel": 0.01079736098637718,
+  "last_obs": 4923,
+  "target_age_idx": 14
+ },
+ {
+  "player_id": 656577,
+  "player_name": "Alex Jackson",
+  "age": 29,
+  "pa": 100,
+  "target": 0.014159495038788217,
+  "marcel": -0.044037166320741006,
+  "last_obs": 4929,
+  "target_age_idx": 11
+ },
+ {
+  "player_id": 656716,
+  "player_name": "Zach McKinstry",
+  "age": 30,
+  "pa": 511,
+  "target": 0.019900495038788213,
+  "marcel": -0.026964593296003425,
+  "last_obs": 4948,
+  "target_age_idx": 12
+ },
+ {
+  "player_id": 656775,
+  "player_name": "Cedric Mullins",
+  "age": 30,
+  "pa": 498,
+  "target": -0.011730504961211807,
+  "marcel": -0.001342728350832989,
+  "last_obs": 4955,
+  "target_age_idx": 12
+ },
+ {
+  "player_id": 656811,
+  "player_name": "Ryan O'Hearn",
+  "age": 31,
+  "pa": 544,
+  "target": 0.03614049503878819,
+  "marcel": 0.009377116955610554,
+  "last_obs": 4962,
+  "target_age_idx": 13
+ },
+ {
+  "player_id": 656896,
+  "player_name": "Emmanuel Rivera",
+  "age": 29,
+  "pa": 127,
+  "target": -0.05466050496121183,
+  "marcel": -0.011883433232998841,
+  "last_obs": 4972,
+  "target_age_idx": 11
+ },
+ {
+  "player_id": 656941,
+  "player_name": "Kyle Schwarber",
+  "age": 32,
+  "pa": 724,
+  "target": 0.07827949503878817,
+  "marcel": 0.03596275462705534,
+  "last_obs": 4982,
+  "target_age_idx": 14
+ },
+ {
+  "player_id": 656976,
+  "player_name": "Pavin Smith",
+  "age": 29,
+  "pa": 288,
+  "target": 0.03471649503878821,
+  "marcel": 0.004511473238313357,
+  "last_obs": 4987,
+  "target_age_idx": 11
+ },
+ {
+  "player_id": 657041,
+  "player_name": "Lane Thomas",
+  "age": 29,
+  "pa": 142,
+  "target": -0.07781350496121181,
+  "marcel": 0.004310471335030763,
+  "last_obs": 4994,
+  "target_age_idx": 11
+ },
+ {
+  "player_id": 657077,
+  "player_name": "Alex Verdugo",
+  "age": 29,
+  "pa": 213,
+  "target": -0.04880850496121181,
+  "marcel": -0.006543725022041869,
+  "last_obs": 5008,
+  "target_age_idx": 11
+ },
+ {
+  "player_id": 657136,
+  "player_name": "Connor Wong",
+  "age": 29,
+  "pa": 188,
+  "target": -0.08326250496121179,
+  "marcel": -0.00023766912835804233,
+  "last_obs": 5017,
+  "target_age_idx": 11
+ },
+ {
+  "player_id": 657557,
+  "player_name": "Paul DeJong",
+  "age": 31,
+  "pa": 208,
+  "target": -0.035311504961211826,
+  "marcel": -0.02723293074277311,
+  "last_obs": 5038,
+  "target_age_idx": 13
+ },
+ {
+  "player_id": 657656,
+  "player_name": "Ramón Laureano",
+  "age": 30,
+  "pa": 488,
+  "target": 0.05127649503878817,
+  "marcel": -0.006335868468283434,
+  "last_obs": 5045,
+  "target_age_idx": 12
+ },
+ {
+  "player_id": 657757,
+  "player_name": "Gavin Sheets",
+  "age": 29,
+  "pa": 545,
+  "target": 0.009985495038788206,
+  "marcel": -0.020669139440093076,
+  "last_obs": 5051,
+  "target_age_idx": 11
+ },
+ {
+  "player_id": 660162,
+  "player_name": "Yoán Moncada",
+  "age": 30,
+  "pa": 289,
+  "target": 0.026275495038788177,
+  "marcel": -0.011879739287989355,
+  "last_obs": 5068,
+  "target_age_idx": 12
+ },
+ {
+  "player_id": 660271,
+  "player_name": "Shohei Ohtani",
+  "age": 30,
+  "pa": 727,
+  "target": 0.10472449503878822,
+  "marcel": 0.08908830407802565,
+  "last_obs": 5075,
+  "target_age_idx": 12
+ },
+ {
+  "player_id": 660670,
+  "player_name": "Ronald Acuña Jr.",
+  "age": 27,
+  "pa": 412,
+  "target": 0.08975449503878818,
+  "marcel": 0.059161916483511656,
+  "last_obs": 5100,
+  "target_age_idx": 9
+ },
+ {
+  "player_id": 660688,
+  "player_name": "Keibert Ruiz",
+  "age": 26,
+  "pa": 267,
+  "target": -0.0507965049612118,
+  "marcel": -0.013304323820621355,
+  "last_obs": 5105,
+  "target_age_idx": 8
+ },
+ {
+  "player_id": 660821,
+  "player_name": "Jesús Sánchez",
+  "age": 27,
+  "pa": 497,
+  "target": -0.00872750496121183,
+  "marcel": 0.008545057988437799,
+  "last_obs": 5121,
+  "target_age_idx": 9
+ },
+ {
+  "player_id": 660844,
+  "player_name": "Leo Rivas",
+  "age": 27,
+  "pa": 111,
+  "target": 0.020363495038788204,
+  "marcel": -0.003801313668482187,
+  "last_obs": 5124,
+  "target_age_idx": 9
+ },
+ {
+  "player_id": 661388,
+  "player_name": "William Contreras",
+  "age": 27,
+  "pa": 659,
+  "target": 0.018476495038788177,
+  "marcel": 0.04440115409361689,
+  "last_obs": 5129,
+  "target_age_idx": 9
+ },
+ {
+  "player_id": 662139,
+  "player_name": "Daulton Varsho",
+  "age": 28,
+  "pa": 271,
+  "target": 0.03192349503878822,
+  "marcel": -0.0047932977546978894,
+  "last_obs": 5137,
+  "target_age_idx": 10
+ },
+ {
+  "player_id": 663330,
+  "player_name": "Jahmai Jones",
+  "age": 27,
+  "pa": 150,
+  "target": 0.08571349503878822,
+  "marcel": 0.0005442489366515035,
+  "last_obs": 5141,
+  "target_age_idx": 9
+ },
+ {
+  "player_id": 663368,
+  "player_name": "Blake Perkins",
+  "age": 28,
+  "pa": 171,
+  "target": -0.026167504961211785,
+  "marcel": -0.012494784380876367,
+  "last_obs": 5143,
+  "target_age_idx": 10
+ },
+ {
+  "player_id": 663457,
+  "player_name": "Lars Nootbaar",
+  "age": 27,
+  "pa": 583,
+  "target": -0.008941504961211821,
+  "marcel": 0.02423502627830837,
+  "last_obs": 5148,
+  "target_age_idx": 9
+ },
+ {
+  "player_id": 663538,
+  "player_name": "Nico Hoerner",
+  "age": 28,
+  "pa": 649,
+  "target": 0.010991495038788213,
+  "marcel": 0.005897220643038326,
+  "last_obs": 5159,
+  "target_age_idx": 10
+ },
+ {
+  "player_id": 663586,
+  "player_name": "Austin Riley",
+  "age": 28,
+  "pa": 447,
+  "target": 0.00532749503878821,
+  "marcel": 0.041103812519212524,
+  "last_obs": 5167,
+  "target_age_idx": 10
+ },
+ {
+  "player_id": 663604,
+  "player_name": "Brandon Lockridge",
+  "age": 28,
+  "pa": 148,
+  "target": -0.05866250496121178,
+  "marcel": -0.001282303171522281,
+  "last_obs": 5168,
+  "target_age_idx": 10
+ },
+ {
+  "player_id": 663616,
+  "player_name": "Trevor Larnach",
+  "age": 28,
+  "pa": 567,
+  "target": 0.003469495038788184,
+  "marcel": 0.012021520953671871,
+  "last_obs": 5179,
+  "target_age_idx": 10
+ },
+ {
+  "player_id": 663624,
+  "player_name": "Ryan Mountcastle",
+  "age": 28,
+  "pa": 357,
+  "target": -0.029519504961211807,
+  "marcel": 0.008997137797413735,
+  "last_obs": 5184,
+  "target_age_idx": 10
+ },
+ {
+  "player_id": 663647,
+  "player_name": "Ke'Bryan Hayes",
+  "age": 28,
+  "pa": 570,
+  "target": -0.047252504961211805,
+  "marcel": -0.015669765334383134,
+  "last_obs": 5193,
+  "target_age_idx": 10
+ },
+ {
+  "player_id": 663656,
+  "player_name": "Kyle Tucker",
+  "age": 28,
+  "pa": 597,
+  "target": 0.0498064950387882,
+  "marcel": 0.05583193273679671,
+  "last_obs": 5200,
+  "target_age_idx": 10
+ },
+ {
+  "player_id": 663697,
+  "player_name": "Jonathan India",
+  "age": 28,
+  "pa": 567,
+  "target": -0.012390504961211801,
+  "marcel": 0.014506964177127213,
+  "last_obs": 5208,
+  "target_age_idx": 10
+ },
+ {
+  "player_id": 663698,
+  "player_name": "Joey Bart",
+  "age": 28,
+  "pa": 332,
+  "target": 0.0035374950387881965,
+  "marcel": 0.003950907187230179,
+  "last_obs": 5213,
+  "target_age_idx": 10
+ },
+ {
+  "player_id": 663728,
+  "player_name": "Cal Raleigh",
+  "age": 28,
+  "pa": 705,
+  "target": 0.07891049503878822,
+  "marcel": 0.012313461075143861,
+  "last_obs": 5217,
+  "target_age_idx": 10
+ },
+ {
+  "player_id": 663743,
+  "player_name": "Nick Fortes",
+  "age": 28,
+  "pa": 242,
+  "target": -0.027068504961211826,
+  "marcel": -0.036340898424990165,
+  "last_obs": 5222,
+  "target_age_idx": 10
+ },
+ {
+  "player_id": 663757,
+  "player_name": "Trent Grisham",
+  "age": 28,
+  "pa": 581,
+  "target": 0.040169495038788194,
+  "marcel": -0.015672199816845978,
+  "last_obs": 5228,
+  "target_age_idx": 10
+ },
+ {
+  "player_id": 663837,
+  "player_name": "Matt Vierling",
+  "age": 28,
+  "pa": 100,
+  "target": -0.03508350496121182,
+  "marcel": -7.19027722069776e-05,
+  "last_obs": 5234,
+  "target_age_idx": 10
+ },
+ {
+  "player_id": 663853,
+  "player_name": "Romy Gonzalez",
+  "age": 28,
+  "pa": 341,
+  "target": 0.038763495038788176,
+  "marcel": -0.012512416129834003,
+  "last_obs": 5241,
+  "target_age_idx": 10
+ },
+ {
+  "player_id": 663886,
+  "player_name": "Tyler Stephenson",
+  "age": 28,
+  "pa": 342,
+  "target": 0.006229495038788224,
+  "marcel": 0.014605195455282105,
+  "last_obs": 5246,
+  "target_age_idx": 10
+ },
+ {
+  "player_id": 663898,
+  "player_name": "Brendan Rodgers",
+  "age": 28,
+  "pa": 128,
+  "target": -0.06677150496121181,
+  "marcel": 0.0049563159297894566,
+  "last_obs": 5256,
+  "target_age_idx": 10
+ },
+ {
+  "player_id": 663993,
+  "player_name": "Nathaniel Lowe",
+  "age": 29,
+  "pa": 609,
+  "target": -0.011713504961211818,
+  "marcel": 0.028569413665144816,
+  "last_obs": 5270,
+  "target_age_idx": 11
+ },
+ {
+  "player_id": 664023,
+  "player_name": "Ian Happ",
+  "age": 30,
+  "pa": 663,
+  "target": 0.02031049503878818,
+  "marcel": 0.02427301413506283,
+  "last_obs": 5279,
+  "target_age_idx": 12
+ },
+ {
+  "player_id": 664034,
+  "player_name": "Ty France",
+  "age": 30,
+  "pa": 490,
+  "target": -0.011248504961211825,
+  "marcel": -0.0005667403223091338,
+  "last_obs": 5288,
+  "target_age_idx": 12
+ },
+ {
+  "player_id": 664040,
+  "player_name": "Brandon Lowe",
+  "age": 30,
+  "pa": 553,
+  "target": 0.02126449503878819,
+  "marcel": 0.012011765719033007,
+  "last_obs": 5295,
+  "target_age_idx": 12
+ },
+ {
+  "player_id": 664056,
+  "player_name": "Harrison Bader",
+  "age": 31,
+  "pa": 501,
+  "target": 0.03328349503878819,
+  "marcel": -0.02662971558204813,
+  "last_obs": 5307,
+  "target_age_idx": 13
+ },
+ {
+  "player_id": 664059,
+  "player_name": "Sam Haggerty",
+  "age": 31,
+  "pa": 182,
+  "target": -0.005844504961211805,
+  "marcel": -0.006009990944923049,
+  "last_obs": 5326,
+  "target_age_idx": 13
+ },
+ {
+  "player_id": 664238,
+  "player_name": "Dylan Moore",
+  "age": 32,
+  "pa": 243,
+  "target": -0.03354750496121178,
+  "marcel": -0.0006084678946101096,
+  "last_obs": 5341,
+  "target_age_idx": 14
+ },
+ {
+  "player_id": 664702,
+  "player_name": "Myles Straw",
+  "age": 30,
+  "pa": 299,
+  "target": -0.014055504961211829,
+  "marcel": -0.040112513270871064,
+  "last_obs": 5363,
+  "target_age_idx": 12
+ },
+ {
+  "player_id": 664728,
+  "player_name": "Kyle Isbel",
+  "age": 28,
+  "pa": 409,
+  "target": -0.026139504961211812,
+  "marcel": -0.022001476789001995,
+  "last_obs": 5367,
+  "target_age_idx": 10
+ },
+ {
+  "player_id": 664761,
+  "player_name": "Alec Bohm",
+  "age": 28,
+  "pa": 504,
+  "target": 0.009297495038788184,
+  "marcel": 0.013900222390038963,
+  "last_obs": 5374,
+  "target_age_idx": 10
+ },
+ {
+  "player_id": 664770,
+  "player_name": "Nathan Lukes",
+  "age": 30,
+  "pa": 438,
+  "target": 0.0038744950387881727,
+  "marcel": 0.005834063314887616,
+  "last_obs": 5376,
+  "target_age_idx": 12
+ },
+ {
+  "player_id": 664774,
+  "player_name": "LaMonte Wade Jr.",
+  "age": 31,
+  "pa": 242,
+  "target": -0.0715875049612118,
+  "marcel": 0.015462184636776621,
+  "last_obs": 5382,
+  "target_age_idx": 13
+ },
+ {
+  "player_id": 664983,
+  "player_name": "Jake McCarthy",
+  "age": 27,
+  "pa": 222,
+  "target": -0.056762504961211824,
+  "marcel": 0.010435236864610953,
+  "last_obs": 5412,
+  "target_age_idx": 9
+ },
+ {
+  "player_id": 665019,
+  "player_name": "Kody Clemens",
+  "age": 29,
+  "pa": 386,
+  "target": -0.006387504961211821,
+  "marcel": -0.02233243230746562,
+  "last_obs": 5415,
+  "target_age_idx": 11
+ },
+ {
+  "player_id": 665161,
+  "player_name": "Jeremy Peña",
+  "age": 27,
+  "pa": 543,
+  "target": 0.04981349503878818,
+  "marcel": -0.0009314508841630209,
+  "last_obs": 5431,
+  "target_age_idx": 9
+ },
+ {
+  "player_id": 665487,
+  "player_name": "Fernando Tatis Jr.",
+  "age": 26,
+  "pa": 691,
+  "target": 0.04011049503878822,
+  "marcel": 0.029704702242338732,
+  "last_obs": 5438,
+  "target_age_idx": 8
+ },
+ {
+  "player_id": 665489,
+  "player_name": "Vladimir Guerrero Jr.",
+  "age": 26,
+  "pa": 680,
+  "target": 0.052549495038788196,
+  "marcel": 0.053923786638824966,
+  "last_obs": 5444,
+  "target_age_idx": 8
+ },
+ {
+  "player_id": 665561,
+  "player_name": "Rafael Marchán",
+  "age": 26,
+  "pa": 118,
+  "target": -0.04952350496121183,
+  "marcel": 0.019447093419971972,
+  "last_obs": 5452,
+  "target_age_idx": 8
+ },
+ {
+  "player_id": 665742,
+  "player_name": "Juan Soto",
+  "age": 26,
+  "pa": 715,
+  "target": 0.0767304950387882,
+  "marcel": 0.08436317188043863,
+  "last_obs": 5460,
+  "target_age_idx": 8
+ },
+ {
+  "player_id": 665750,
+  "player_name": "Leody Taveras",
+  "age": 26,
+  "pa": 180,
+  "target": -0.0831255049612118,
+  "marcel": -0.00768096516500022,
+  "last_obs": 5465,
+  "target_age_idx": 8
+ },
+ {
+  "player_id": 665804,
+  "player_name": "Miguel Amaya",
+  "age": 26,
+  "pa": 103,
+  "target": 0.03257649503878818,
+  "marcel": -0.009553428103782402,
+  "last_obs": 5468,
+  "target_age_idx": 8
+ },
+ {
+  "player_id": 665828,
+  "player_name": "Oswaldo Cabrera",
+  "age": 26,
+  "pa": 122,
+  "target": -0.026927504961211823,
+  "marcel": -0.018337669523030342,
+  "last_obs": 5471,
+  "target_age_idx": 8
+ },
+ {
+  "player_id": 665833,
+  "player_name": "Oneil Cruz",
+  "age": 26,
+  "pa": 544,
+  "target": -0.018315504961211815,
+  "marcel": 0.019957501068811556,
+  "last_obs": 5475,
+  "target_age_idx": 8
+ },
+ {
+  "player_id": 665839,
+  "player_name": "Enmanuel Valdez",
+  "age": 26,
+  "pa": 102,
+  "target": -0.02325150496121181,
+  "marcel": -0.00596540765210779,
+  "last_obs": 5477,
+  "target_age_idx": 8
+ },
+ {
+  "player_id": 665862,
+  "player_name": "Jazz Chisholm Jr.",
+  "age": 27,
+  "pa": 531,
+  "target": 0.035915495038788214,
+  "marcel": 0.019673334555806055,
+  "last_obs": 5485,
+  "target_age_idx": 9
+ },
+ {
+  "player_id": 665926,
+  "player_name": "Andrés Giménez",
+  "age": 26,
+  "pa": 369,
+  "target": -0.04415750496121179,
+  "marcel": 0.0028820519689651825,
+  "last_obs": 5496,
+  "target_age_idx": 8
+ },
+ {
+  "player_id": 665966,
+  "player_name": "Carlos Narváez",
+  "age": 26,
+  "pa": 446,
+  "target": 0.0019784950387882194,
+  "marcel": 0.0031154614895522736,
+  "last_obs": 5499,
+  "target_age_idx": 8
+ },
+ {
+  "player_id": 666018,
+  "player_name": "Jonathan Aranda",
+  "age": 27,
+  "pa": 422,
+  "target": 0.06779849503878821,
+  "marcel": 0.0008072053472466534,
+  "last_obs": 5502,
+  "target_age_idx": 9
+ },
+ {
+  "player_id": 666023,
+  "player_name": "Freddy Fermin",
+  "age": 30,
+  "pa": 347,
+  "target": -0.03280650496121179,
+  "marcel": -0.0035647529800527655,
+  "last_obs": 5505,
+  "target_age_idx": 12
+ },
+ {
+  "player_id": 666134,
+  "player_name": "Nolan Jones",
+  "age": 27,
+  "pa": 403,
+  "target": -0.0427215049612118,
+  "marcel": 0.023668497829723634,
+  "last_obs": 5510,
+  "target_age_idx": 9
+ },
+ {
+  "player_id": 666139,
+  "player_name": "Josh Lowe",
+  "age": 27,
+  "pa": 435,
+  "target": -0.02918850496121178,
+  "marcel": 0.008877689302006886,
+  "last_obs": 5520,
+  "target_age_idx": 9
+ },
+ {
+  "player_id": 666149,
+  "player_name": "Tyler Fitzgerald",
+  "age": 27,
+  "pa": 243,
+  "target": -0.0443625049612118,
+  "marcel": 0.02976304479515779,
+  "last_obs": 5522,
+  "target_age_idx": 9
+ },
+ {
+  "player_id": 666152,
+  "player_name": "David Hamilton",
+  "age": 27,
+  "pa": 194,
+  "target": -0.0528565049612118,
+  "marcel": -0.004672788420023055,
+  "last_obs": 5526,
+  "target_age_idx": 9
+ },
+ {
+  "player_id": 666158,
+  "player_name": "Gavin Lux",
+  "age": 27,
+  "pa": 503,
+  "target": 0.009243495038788185,
+  "marcel": 0.008700449645862807,
+  "last_obs": 5531,
+  "target_age_idx": 9
+ },
+ {
+  "player_id": 666160,
+  "player_name": "Mickey Moniak",
+  "age": 27,
+  "pa": 461,
+  "target": 0.03458449503878819,
+  "marcel": -0.00950119730306509,
+  "last_obs": 5536,
+  "target_age_idx": 9
+ },
+ {
+  "player_id": 666163,
+  "player_name": "Ben Rortvedt",
+  "age": 27,
+  "pa": 128,
+  "target": -0.10077050496121182,
+  "marcel": -0.020561563192890653,
+  "last_obs": 5539,
+  "target_age_idx": 9
+ },
+ {
+  "player_id": 666176,
+  "player_name": "Jo Adell",
+  "age": 26,
+  "pa": 573,
+  "target": 0.019443495038788172,
+  "marcel": -0.008696206901079362,
+  "last_obs": 5547,
+  "target_age_idx": 8
+ },
+ {
+  "player_id": 666181,
+  "player_name": "Will Benson",
+  "age": 27,
+  "pa": 253,
+  "target": -0.014685504961211793,
+  "marcel": 0.0038075795524415423,
+  "last_obs": 5552,
+  "target_age_idx": 9
+ },
+ {
+  "player_id": 666182,
+  "player_name": "Bo Bichette",
+  "age": 27,
+  "pa": 628,
+  "target": 0.0477794950387882,
+  "marcel": 0.014079536723212771,
+  "last_obs": 5558,
+  "target_age_idx": 9
+ },
+ {
+  "player_id": 666185,
+  "player_name": "Dylan Carlson",
+  "age": 26,
+  "pa": 241,
+  "target": -0.040278504961211825,
+  "marcel": -0.01499573577139629,
+  "last_obs": 5563,
+  "target_age_idx": 8
+ },
+ {
+  "player_id": 666211,
+  "player_name": "Taylor Trammell",
+  "age": 27,
+  "pa": 135,
+  "target": -0.030858504961211786,
+  "marcel": -0.005591189930643503,
+  "last_obs": 5573,
+  "target_age_idx": 9
+ },
+ {
+  "player_id": 666310,
+  "player_name": "Bo Naylor",
+  "age": 25,
+  "pa": 414,
+  "target": -0.024511504961211794,
+  "marcel": -0.008099920039110087,
+  "last_obs": 5577,
+  "target_age_idx": 7
+ },
+ {
+  "player_id": 666397,
+  "player_name": "Edouard Julien",
+  "age": 26,
+  "pa": 208,
+  "target": -0.02752350496121181,
+  "marcel": 0.012391784813634787,
+  "last_obs": 5579,
+  "target_age_idx": 8
+ },
+ {
+  "player_id": 666624,
+  "player_name": "Christopher Morel",
+  "age": 26,
+  "pa": 305,
+  "target": -0.014160504961211795,
+  "marcel": 0.002042229564523379,
+  "last_obs": 5586,
+  "target_age_idx": 8
+ },
+ {
+  "player_id": 666969,
+  "player_name": "Adolis García",
+  "age": 32,
+  "pa": 547,
+  "target": -0.027292504961211828,
+  "marcel": 0.005362849883030596,
+  "last_obs": 5608,
+  "target_age_idx": 14
+ },
+ {
+  "player_id": 666971,
+  "player_name": "Lourdes Gurriel Jr.",
+  "age": 31,
+  "pa": 546,
+  "target": -0.006494504961211789,
+  "marcel": 0.010403948561820753,
+  "last_obs": 5615,
+  "target_age_idx": 13
+ },
+ {
+  "player_id": 667472,
+  "player_name": "Dane Myers",
+  "age": 29,
+  "pa": 333,
+  "target": -0.03830150496121182,
+  "marcel": 0.0010323670382823003,
+  "last_obs": 5620,
+  "target_age_idx": 11
+ },
+ {
+  "player_id": 667670,
+  "player_name": "Brent Rooker",
+  "age": 30,
+  "pa": 699,
+  "target": 0.03566749503878819,
+  "marcel": 0.04537261333318887,
+  "last_obs": 5625,
+  "target_age_idx": 12
+ },
+ {
+  "player_id": 668227,
+  "player_name": "Randy Arozarena",
+  "age": 30,
+  "pa": 709,
+  "target": 0.01917449503878821,
+  "marcel": 0.016420119045403414,
+  "last_obs": 5632,
+  "target_age_idx": 12
+ },
+ {
+  "player_id": 668670,
+  "player_name": "Jake Rogers",
+  "age": 30,
+  "pa": 142,
+  "target": -0.0428375049612118,
+  "marcel": -0.020833992099585807,
+  "last_obs": 5642,
+  "target_age_idx": 12
+ },
+ {
+  "player_id": 668709,
+  "player_name": "JJ Bleday",
+  "age": 27,
+  "pa": 344,
+  "target": -0.010996504961211795,
+  "marcel": 0.004876861279428435,
+  "last_obs": 5645,
+  "target_age_idx": 9
+ },
+ {
+  "player_id": 668715,
+  "player_name": "Spencer Steer",
+  "age": 27,
+  "pa": 568,
+  "target": 0.002717495038788209,
+  "marcel": 0.01866736315989065,
+  "last_obs": 5648,
+  "target_age_idx": 9
+ },
+ {
+  "player_id": 668804,
+  "player_name": "Bryan Reynolds",
+  "age": 30,
+  "pa": 654,
+  "target": 0.0015634950387882207,
+  "marcel": 0.024788612375408137,
+  "last_obs": 5671,
+  "target_age_idx": 12
+ },
+ {
+  "player_id": 668885,
+  "player_name": "Austin Martin",
+  "age": 26,
+  "pa": 181,
+  "target": 0.019718495038788197,
+  "marcel": -0.0011348778416632732,
+  "last_obs": 5678,
+  "target_age_idx": 8
+ },
+ {
+  "player_id": 668901,
+  "player_name": "Mark Vientos",
+  "age": 25,
+  "pa": 463,
+  "target": -0.009613504961211827,
+  "marcel": 0.01866215038737662,
+  "last_obs": 5681,
+  "target_age_idx": 7
+ },
+ {
+  "player_id": 668904,
+  "player_name": "Royce Lewis",
+  "age": 26,
+  "pa": 403,
+  "target": -0.02156550496121179,
+  "marcel": 0.029138855206430225,
+  "last_obs": 5684,
+  "target_age_idx": 8
+ },
+ {
+  "player_id": 668930,
+  "player_name": "Brice Turang",
+  "age": 25,
+  "pa": 659,
+  "target": 0.03320749503878817,
+  "marcel": -0.01792002022698419,
+  "last_obs": 5686,
+  "target_age_idx": 7
+ },
+ {
+  "player_id": 668939,
+  "player_name": "Adley Rutschman",
+  "age": 27,
+  "pa": 365,
+  "target": -0.015168504961211804,
+  "marcel": 0.021429295299197848,
+  "last_obs": 5689,
+  "target_age_idx": 9
+ },
+ {
+  "player_id": 668942,
+  "player_name": "Josh Rojas",
+  "age": 31,
+  "pa": 211,
+  "target": -0.0808325049612118,
+  "marcel": -0.01455715923480777,
+  "last_obs": 5695,
+  "target_age_idx": 13
+ },
+ {
+  "player_id": 669016,
+  "player_name": "Brandon Marsh",
+  "age": 27,
+  "pa": 425,
+  "target": 0.026109495038788177,
+  "marcel": 0.01756188550726573,
+  "last_obs": 5710,
+  "target_age_idx": 9
+ },
+ {
+  "player_id": 669065,
+  "player_name": "Kyle Stowers",
+  "age": 27,
+  "pa": 457,
+  "target": 0.07309649503878818,
+  "marcel": -0.023455220939669785,
+  "last_obs": 5715,
+  "target_age_idx": 9
+ },
+ {
+  "player_id": 669127,
+  "player_name": "Shea Langeliers",
+  "age": 27,
+  "pa": 523,
+  "target": 0.0507214950387882,
+  "marcel": -0.004008337894684577,
+  "last_obs": 5722,
+  "target_age_idx": 9
+ },
+ {
+  "player_id": 669221,
+  "player_name": "Sean Murphy",
+  "age": 30,
+  "pa": 337,
+  "target": -0.004311504961211798,
+  "marcel": 0.012978922534896242,
+  "last_obs": 5737,
+  "target_age_idx": 12
+ },
+ {
+  "player_id": 669224,
+  "player_name": "Austin Wells",
+  "age": 25,
+  "pa": 448,
+  "target": -0.01087350496121181,
+  "marcel": 0.00940737279975934,
+  "last_obs": 5745,
+  "target_age_idx": 7
+ },
+ {
+  "player_id": 669234,
+  "player_name": "Justyn-Henry Malloy",
+  "age": 25,
+  "pa": 127,
+  "target": -0.01215650496121179,
+  "marcel": -0.0023620065906019283,
+  "last_obs": 5746,
+  "target_age_idx": 7
+ },
+ {
+  "player_id": 669242,
+  "player_name": "Tommy Edman",
+  "age": 30,
+  "pa": 377,
+  "target": -0.029001504961211788,
+  "marcel": -0.0033822962694406433,
+  "last_obs": 5752,
+  "target_age_idx": 12
+ },
+ {
+  "player_id": 669257,
+  "player_name": "Will Smith",
+  "age": 30,
+  "pa": 436,
+  "target": 0.07614449503878817,
+  "marcel": 0.020420761094162798,
+  "last_obs": 5762,
+  "target_age_idx": 12
+ },
+ {
+  "player_id": 669261,
+  "player_name": "Jack Suwinski",
+  "age": 26,
+  "pa": 178,
+  "target": -0.06305250496121179,
+  "marcel": 0.002197001842268953,
+  "last_obs": 5765,
+  "target_age_idx": 8
+ },
+ {
+  "player_id": 669289,
+  "player_name": "Santiago Espinal",
+  "age": 30,
+  "pa": 328,
+  "target": -0.054348504961211797,
+  "marcel": -0.01683675043647659,
+  "last_obs": 5773,
+  "target_age_idx": 12
+ },
+ {
+  "player_id": 669326,
+  "player_name": "Bryce Teodosio",
+  "age": 26,
+  "pa": 150,
+  "target": -0.0701475049612118,
+  "marcel": -0.005846269974850771,
+  "last_obs": 5778,
+  "target_age_idx": 8
+ },
+ {
+  "player_id": 669357,
+  "player_name": "Nolan Gorman",
+  "age": 25,
+  "pa": 402,
+  "target": -0.021358504961211777,
+  "marcel": 0.009976834524246192,
+  "last_obs": 5784,
+  "target_age_idx": 7
+ },
+ {
+  "player_id": 669364,
+  "player_name": "Xavier Edwards",
+  "age": 25,
+  "pa": 619,
+  "target": -0.004734504961211805,
+  "marcel": 0.029483681304813214,
+  "last_obs": 5786,
+  "target_age_idx": 7
+ },
+ {
+  "player_id": 669394,
+  "player_name": "Jake Burger",
+  "age": 29,
+  "pa": 376,
+  "target": -0.01853350496121181,
+  "marcel": 0.017540416652783608,
+  "last_obs": 5800,
+  "target_age_idx": 11
+ },
+ {
+  "player_id": 669397,
+  "player_name": "Nick Allen",
+  "age": 26,
+  "pa": 416,
+  "target": -0.06793850496121182,
+  "marcel": -0.04888259254598881,
+  "last_obs": 5803,
+  "target_age_idx": 8
+ },
+ {
+  "player_id": 669450,
+  "player_name": "Cooper Hummel",
+  "age": 30,
+  "pa": 105,
+  "target": -0.04550950496121181,
+  "marcel": -0.030247456499713887,
+  "last_obs": 5806,
+  "target_age_idx": 12
+ },
+ {
+  "player_id": 669477,
+  "player_name": "Casey Schmitt",
+  "age": 26,
+  "pa": 348,
+  "target": -0.0058985049612118035,
+  "marcel": -0.017109543785560677,
+  "last_obs": 5808,
+  "target_age_idx": 8
+ },
+ {
+  "player_id": 669701,
+  "player_name": "Josh Smith",
+  "age": 27,
+  "pa": 563,
+  "target": -0.0019695049612117876,
+  "marcel": -0.0011901742250411962,
+  "last_obs": 5813,
+  "target_age_idx": 9
+ },
+ {
+  "player_id": 669707,
+  "player_name": "Jared Triolo",
+  "age": 27,
+  "pa": 376,
+  "target": -0.017285504961211784,
+  "marcel": -0.008861265144756159,
+  "last_obs": 5815,
+  "target_age_idx": 9
+ },
+ {
+  "player_id": 669720,
+  "player_name": "Austin Hays",
+  "age": 29,
+  "pa": 416,
+  "target": 0.013624495038788209,
+  "marcel": 0.0038216672983305555,
+  "last_obs": 5822,
+  "target_age_idx": 11
+ },
+ {
+  "player_id": 669743,
+  "player_name": "Alex Call",
+  "age": 30,
+  "pa": 322,
+  "target": 0.018406495038788218,
+  "marcel": -0.0012313978699810546,
+  "last_obs": 5829,
+  "target_age_idx": 12
+ },
+ {
+  "player_id": 669911,
+  "player_name": "Michael Toglia",
+  "age": 26,
+  "pa": 337,
+  "target": -0.04793250496121182,
+  "marcel": 0.0006726810942139783,
+  "last_obs": 5832,
+  "target_age_idx": 8
+ },
+ {
+  "player_id": 670042,
+  "player_name": "Luke Raley",
+  "age": 30,
+  "pa": 219,
+  "target": -0.0225735049612118,
+  "marcel": 0.020224979934842846,
+  "last_obs": 5842,
+  "target_age_idx": 12
+ },
+ {
+  "player_id": 670156,
+  "player_name": "Miles Mastrobuoni",
+  "age": 29,
+  "pa": 175,
+  "target": -0.031215504961211782,
+  "marcel": -0.03462936420743423,
+  "last_obs": 5854,
+  "target_age_idx": 11
+ },
+ {
+  "player_id": 670223,
+  "player_name": "Matt Mervis",
+  "age": 27,
+  "pa": 134,
+  "target": -0.03901450496121178,
+  "marcel": -0.028785638772481026,
+  "last_obs": 5856,
+  "target_age_idx": 9
+ },
+ {
+  "player_id": 670224,
+  "player_name": "Kameron Misner",
+  "age": 27,
+  "pa": 217,
+  "target": -0.041570504961211785,
+  "marcel": -0.01121460301024002,
+  "last_obs": 5857,
+  "target_age_idx": 9
+ },
+ {
+  "player_id": 670242,
+  "player_name": "Matt Wallner",
+  "age": 27,
+  "pa": 392,
+  "target": 0.021133495038788197,
+  "marcel": 0.046660838980980834,
+  "last_obs": 5860,
+  "target_age_idx": 9
+ },
+ {
+  "player_id": 670541,
+  "player_name": "Yordan Alvarez",
+  "age": 28,
+  "pa": 199,
+  "target": 0.024524495038788174,
+  "marcel": 0.08685416663068957,
+  "last_obs": 5875,
+  "target_age_idx": 10
+ },
+ {
+  "player_id": 670623,
+  "player_name": "Isaac Paredes",
+  "age": 26,
+  "pa": 438,
+  "target": 0.03943349503878818,
+  "marcel": 0.02781685065523609,
+  "last_obs": 5880,
+  "target_age_idx": 8
+ },
+ {
+  "player_id": 670764,
+  "player_name": "Taylor Walls",
+  "age": 28,
+  "pa": 317,
+  "target": -0.04818350496121182,
+  "marcel": -0.037569544515600684,
+  "last_obs": 5889,
+  "target_age_idx": 10
+ },
+ {
+  "player_id": 670770,
+  "player_name": "TJ Friedl",
+  "age": 29,
+  "pa": 685,
+  "target": 0.019522495038788223,
+  "marcel": 0.013185814887208713,
+  "last_obs": 5896,
+  "target_age_idx": 11
+ },
+ {
+  "player_id": 671056,
+  "player_name": "Iván Herrera",
+  "age": 25,
+  "pa": 452,
+  "target": 0.0514684950387882,
+  "marcel": 0.025280398368410784,
+  "last_obs": 5902,
+  "target_age_idx": 7
+ },
+ {
+  "player_id": 671213,
+  "player_name": "Triston Casas",
+  "age": 25,
+  "pa": 112,
+  "target": -0.057417504961211785,
+  "marcel": 0.03941158906171316,
+  "last_obs": 5909,
+  "target_age_idx": 7
+ },
+ {
+  "player_id": 671218,
+  "player_name": "Heliot Ramos",
+  "age": 25,
+  "pa": 695,
+  "target": 0.0057784950387881895,
+  "marcel": 0.018318510752161843,
+  "last_obs": 5912,
+  "target_age_idx": 7
+ },
+ {
+  "player_id": 671221,
+  "player_name": "Drew Waters",
+  "age": 26,
+  "pa": 219,
+  "target": -0.045291504961211815,
+  "marcel": -0.0019134477394291416,
+  "last_obs": 5915,
+  "target_age_idx": 8
+ },
+ {
+  "player_id": 671277,
+  "player_name": "Luis García Jr.",
+  "age": 25,
+  "pa": 526,
+  "target": -0.013121504961211783,
+  "marcel": 0.007172834368530778,
+  "last_obs": 5921,
+  "target_age_idx": 7
+ },
+ {
+  "player_id": 671289,
+  "player_name": "Tyler Freeman",
+  "age": 26,
+  "pa": 428,
+  "target": 0.006374495038788175,
+  "marcel": -0.014709655049586323,
+  "last_obs": 5925,
+  "target_age_idx": 8
+ },
+ {
+  "player_id": 671732,
+  "player_name": "Lawrence Butler",
+  "age": 24,
+  "pa": 630,
+  "target": -0.0027435049612117846,
+  "marcel": 0.020461743241823205,
+  "last_obs": 5927,
+  "target_age_idx": 6
+ },
+ {
+  "player_id": 671739,
+  "player_name": "Michael Harris II",
+  "age": 24,
+  "pa": 641,
+  "target": -0.02444350496121178,
+  "marcel": 0.029524641162704424,
+  "last_obs": 5930,
+  "target_age_idx": 6
+ },
+ {
+  "player_id": 672275,
+  "player_name": "Patrick Bailey",
+  "age": 26,
+  "pa": 452,
+  "target": -0.04770050496121181,
+  "marcel": -0.018775950600731617,
+  "last_obs": 5933,
+  "target_age_idx": 8
+ },
+ {
+  "player_id": 672356,
+  "player_name": "Gabriel Arias",
+  "age": 25,
+  "pa": 471,
+  "target": -0.035464504961211785,
+  "marcel": -0.021122332274096767,
+  "last_obs": 5943,
+  "target_age_idx": 7
+ },
+ {
+  "player_id": 672386,
+  "player_name": "Alejandro Kirk",
+  "age": 26,
+  "pa": 506,
+  "target": 0.021371495038788213,
+  "marcel": 0.008444387560629374,
+  "last_obs": 5948,
+  "target_age_idx": 8
+ },
+ {
+  "player_id": 672515,
+  "player_name": "Gabriel Moreno",
+  "age": 25,
+  "pa": 309,
+  "target": 0.026583495038788207,
+  "marcel": 0.015918903487550318,
+  "last_obs": 5953,
+  "target_age_idx": 7
+ },
+ {
+  "player_id": 672580,
+  "player_name": "Maikel Garcia",
+  "age": 25,
+  "pa": 666,
+  "target": 0.03381749503878817,
+  "marcel": -0.01876763977565382,
+  "last_obs": 5957,
+  "target_age_idx": 7
+ },
+ {
+  "player_id": 672640,
+  "player_name": "Otto Lopez",
+  "age": 26,
+  "pa": 594,
+  "target": -0.0182725049612118,
+  "marcel": 0.0031618145545263543,
+  "last_obs": 5960,
+  "target_age_idx": 8
+ },
+ {
+  "player_id": 672695,
+  "player_name": "Geraldo Perdomo",
+  "age": 25,
+  "pa": 720,
+  "target": 0.05679249503878819,
+  "marcel": -0.0033921535178976225,
+  "last_obs": 5965,
+  "target_age_idx": 7
+ },
+ {
+  "player_id": 672724,
+  "player_name": "Oswald Peraza",
+  "age": 25,
+  "pa": 265,
+  "target": -0.0990645049612118,
+  "marcel": -0.013061933221611643,
+  "last_obs": 5970,
+  "target_age_idx": 7
+ },
+ {
+  "player_id": 672744,
+  "player_name": "Alexander Canario",
+  "age": 25,
+  "pa": 234,
+  "target": -0.04353550496121178,
+  "marcel": 0.014998651391813334,
+  "last_obs": 5972,
+  "target_age_idx": 7
+ },
+ {
+  "player_id": 672761,
+  "player_name": "Wenceel Pérez",
+  "age": 25,
+  "pa": 383,
+  "target": 0.004996495038788185,
+  "marcel": 8.843192661978083e-06,
+  "last_obs": 5973,
+  "target_age_idx": 7
+ },
+ {
+  "player_id": 672820,
+  "player_name": "Lenyn Sosa",
+  "age": 25,
+  "pa": 544,
+  "target": -0.0005235049612117848,
+  "marcel": -0.02591150880124493,
+  "last_obs": 5979,
+  "target_age_idx": 7
+ },
+ {
+  "player_id": 673237,
+  "player_name": "Yainer Diaz",
+  "age": 26,
+  "pa": 567,
+  "target": -0.012946504961211802,
+  "marcel": 0.024495772465429666,
+  "last_obs": 5983,
+  "target_age_idx": 8
+ },
+ {
+  "player_id": 673357,
+  "player_name": "Luis Robert Jr.",
+  "age": 27,
+  "pa": 431,
+  "target": -0.023856504961211777,
+  "marcel": 0.012388444644343022,
+  "last_obs": 5988,
+  "target_age_idx": 9
+ },
+ {
+  "player_id": 673490,
+  "player_name": "Ha-Seong Kim",
+  "age": 29,
+  "pa": 191,
+  "target": -0.024837504961211787,
+  "marcel": 0.003903595273919813,
+  "last_obs": 5994,
+  "target_age_idx": 11
+ },
+ {
+  "player_id": 673548,
+  "player_name": "Seiya Suzuki",
+  "age": 30,
+  "pa": 651,
+  "target": 0.030262495038788195,
+  "marcel": 0.035634724316495225,
+  "last_obs": 5997,
+  "target_age_idx": 12
+ },
+ {
+  "player_id": 673962,
+  "player_name": "Josh Jung",
+  "age": 27,
+  "pa": 511,
+  "target": -0.015139504961211803,
+  "marcel": 0.009151859870162371,
+  "last_obs": 6000,
+  "target_age_idx": 9
+ },
+ {
+  "player_id": 676059,
+  "player_name": "Jordan Westburg",
+  "age": 26,
+  "pa": 352,
+  "target": 0.018977495038788206,
+  "marcel": 0.018929022387362382,
+  "last_obs": 6014,
+  "target_age_idx": 8
+ },
+ {
+  "player_id": 676391,
+  "player_name": "Ernie Clement",
+  "age": 29,
+  "pa": 588,
+  "target": -0.00474750496121179,
+  "marcel": -0.016772007756870377,
+  "last_obs": 6028,
+  "target_age_idx": 11
+ },
+ {
+  "player_id": 676439,
+  "player_name": "Hunter Feduccia",
+  "age": 28,
+  "pa": 105,
+  "target": -0.0874665049612118,
+  "marcel": 0.004102662633411913,
+  "last_obs": 6029,
+  "target_age_idx": 10
+ },
+ {
+  "player_id": 676475,
+  "player_name": "Alec Burleson",
+  "age": 26,
+  "pa": 546,
+  "target": 0.03249449503878821,
+  "marcel": 0.003751864873069777,
+  "last_obs": 6032,
+  "target_age_idx": 8
+ },
+ {
+  "player_id": 676572,
+  "player_name": "Eric Wagaman",
+  "age": 27,
+  "pa": 514,
+  "target": -0.01989950496121179,
+  "marcel": -0.0011062147364725994,
+  "last_obs": 6039,
+  "target_age_idx": 9
+ },
+ {
+  "player_id": 676609,
+  "player_name": "José Caballero",
+  "age": 28,
+  "pa": 370,
+  "target": -0.004104504961211786,
+  "marcel": -0.01841783897271282,
+  "last_obs": 6041,
+  "target_age_idx": 10
+ },
+ {
+  "player_id": 676694,
+  "player_name": "Jake Meyers",
+  "age": 29,
+  "pa": 381,
+  "target": 0.009476495038788224,
+  "marcel": -0.021466041672558223,
+  "last_obs": 6054,
+  "target_age_idx": 11
+ },
+ {
+  "player_id": 676801,
+  "player_name": "Chas McCormick",
+  "age": 30,
+  "pa": 116,
+  "target": -0.05653150496121179,
+  "marcel": 0.00420151427655896,
+  "last_obs": 6066,
+  "target_age_idx": 12
+ },
+ {
+  "player_id": 676914,
+  "player_name": "Davis Schneider",
+  "age": 26,
+  "pa": 227,
+  "target": 0.03807749503878821,
+  "marcel": 0.0018707631293458649,
+  "last_obs": 6071,
+  "target_age_idx": 8
+ },
+ {
+  "player_id": 677008,
+  "player_name": "Heston Kjerstad",
+  "age": 26,
+  "pa": 167,
+  "target": -0.06530150496121181,
+  "marcel": 0.010580242025824582,
+  "last_obs": 6077,
+  "target_age_idx": 8
+ },
+ {
+  "player_id": 677347,
+  "player_name": "Kyren Paris",
+  "age": 23,
+  "pa": 140,
+  "target": -0.029863504961211818,
+  "marcel": -0.02584761533735197,
+  "last_obs": 6080,
+  "target_age_idx": 5
+ },
+ {
+  "player_id": 677587,
+  "player_name": "Brayan Rocchio",
+  "age": 24,
+  "pa": 383,
+  "target": -0.03496050496121178,
+  "marcel": -0.01669894882347084,
+  "last_obs": 6085,
+  "target_age_idx": 6
+ },
+ {
+  "player_id": 677588,
+  "player_name": "José Tena",
+  "age": 24,
+  "pa": 169,
+  "target": -0.017527504961211804,
+  "marcel": -0.003591351074191451,
+  "last_obs": 6087,
+  "target_age_idx": 6
+ },
+ {
+  "player_id": 677594,
+  "player_name": "Julio Rodríguez",
+  "age": 24,
+  "pa": 710,
+  "target": 0.02789049503878821,
+  "marcel": 0.03389187679026173,
+  "last_obs": 6091,
+  "target_age_idx": 6
+ },
+ {
+  "player_id": 677595,
+  "player_name": "Ronny Mauricio",
+  "age": 24,
+  "pa": 184,
+  "target": -0.023034504961211788,
+  "marcel": -0.00011680800945046421,
+  "last_obs": 6092,
+  "target_age_idx": 6
+ },
+ {
+  "player_id": 677649,
+  "player_name": "Ezequiel Duran",
+  "age": 26,
+  "pa": 219,
+  "target": -0.0645435049612118,
+  "marcel": -0.005573748659226663,
+  "last_obs": 6095,
+  "target_age_idx": 8
+ },
+ {
+  "player_id": 677800,
+  "player_name": "Wilyer Abreu",
+  "age": 26,
+  "pa": 417,
+  "target": 0.020418495038788176,
+  "marcel": 0.026095132965306467,
+  "last_obs": 6097,
+  "target_age_idx": 8
+ },
+ {
+  "player_id": 677942,
+  "player_name": "Blaze Alexander",
+  "age": 26,
+  "pa": 266,
+  "target": 0.0003024950387882086,
+  "marcel": 4.263958761352438e-05,
+  "last_obs": 6101,
+  "target_age_idx": 8
+ },
+ {
+  "player_id": 677950,
+  "player_name": "Alek Thomas",
+  "age": 25,
+  "pa": 469,
+  "target": -0.02593950496121178,
+  "marcel": -0.023057587409101132,
+  "last_obs": 6104,
+  "target_age_idx": 7
+ },
+ {
+  "player_id": 677951,
+  "player_name": "Bobby Witt Jr.",
+  "age": 25,
+  "pa": 687,
+  "target": 0.04719149503878822,
+  "marcel": 0.05365251252614722,
+  "last_obs": 6107,
+  "target_age_idx": 7
+ },
+ {
+  "player_id": 678009,
+  "player_name": "Parker Meadows",
+  "age": 25,
+  "pa": 213,
+  "target": -0.03637850496121181,
+  "marcel": 0.010720860346967176,
+  "last_obs": 6111,
+  "target_age_idx": 7
+ },
+ {
+  "player_id": 678246,
+  "player_name": "Miguel Vargas",
+  "age": 25,
+  "pa": 569,
+  "target": 0.0012954950387881747,
+  "marcel": -0.02979182137042985,
+  "last_obs": 6117,
+  "target_age_idx": 7
+ },
+ {
+  "player_id": 678554,
+  "player_name": "Curtis Mead",
+  "age": 24,
+  "pa": 264,
+  "target": -0.03496250496121178,
+  "marcel": -0.010259463259102153,
+  "last_obs": 6121,
+  "target_age_idx": 6
+ },
+ {
+  "player_id": 678662,
+  "player_name": "Ezequiel Tovar",
+  "age": 23,
+  "pa": 390,
+  "target": -0.012585504961211802,
+  "marcel": 0.01057265934747248,
+  "last_obs": 6124,
+  "target_age_idx": 5
+ },
+ {
+  "player_id": 678877,
+  "player_name": "Jhonkensy Noel",
+  "age": 23,
+  "pa": 153,
+  "target": -0.1064785049612118,
+  "marcel": 0.020774861186132088,
+  "last_obs": 6125,
+  "target_age_idx": 5
+ },
+ {
+  "player_id": 678882,
+  "player_name": "Ceddanne Rafaela",
+  "age": 24,
+  "pa": 587,
+  "target": -0.006593504961211805,
+  "marcel": -0.009320467153081768,
+  "last_obs": 6127,
+  "target_age_idx": 6
+ },
+ {
+  "player_id": 679032,
+  "player_name": "Johan Rojas",
+  "age": 24,
+  "pa": 172,
+  "target": -0.05917550496121182,
+  "marcel": -0.010309949611596925,
+  "last_obs": 6132,
+  "target_age_idx": 6
+ },
+ {
+  "player_id": 679529,
+  "player_name": "Spencer Torkelson",
+  "age": 25,
+  "pa": 649,
+  "target": 0.025545495038788224,
+  "marcel": -0.0005460617323256867,
+  "last_obs": 6135,
+  "target_age_idx": 7
+ },
+ {
+  "player_id": 679845,
+  "player_name": "Nick Loftin",
+  "age": 26,
+  "pa": 188,
+  "target": -0.034586504961211795,
+  "marcel": -0.01633859195289239,
+  "last_obs": 6140,
+  "target_age_idx": 8
+ },
+ {
+  "player_id": 680474,
+  "player_name": "Max Schuemann",
+  "age": 28,
+  "pa": 213,
+  "target": -0.05090350496121182,
+  "marcel": -0.017486151597400357,
+  "last_obs": 6147,
+  "target_age_idx": 10
+ },
+ {
+  "player_id": 680574,
+  "player_name": "Matt McLain",
+  "age": 25,
+  "pa": 577,
+  "target": -0.0266005049612118,
+  "marcel": 0.03793753079857792,
+  "last_obs": 6149,
+  "target_age_idx": 7
+ },
+ {
+  "player_id": 680718,
+  "player_name": "Addison Barger",
+  "age": 25,
+  "pa": 502,
+  "target": 0.008643495038788196,
+  "marcel": -0.01615256993804448,
+  "last_obs": 6156,
+  "target_age_idx": 7
+ },
+ {
+  "player_id": 680728,
+  "player_name": "Adrian Del Castillo",
+  "age": 25,
+  "pa": 131,
+  "target": -0.017822504961211794,
+  "marcel": 0.02758845895790457,
+  "last_obs": 6157,
+  "target_age_idx": 7
+ },
+ {
+  "player_id": 680737,
+  "player_name": "Michael Helman",
+  "age": 29,
+  "pa": 110,
+  "target": 0.006366495038788222,
+  "marcel": 0.0011535430333192709,
+  "last_obs": 6158,
+  "target_age_idx": 11
+ },
+ {
+  "player_id": 680757,
+  "player_name": "Steven Kwan",
+  "age": 27,
+  "pa": 693,
+  "target": -0.0035805049612118167,
+  "marcel": 0.021360182704009634,
+  "last_obs": 6161,
+  "target_age_idx": 9
+ },
+ {
+  "player_id": 680776,
+  "player_name": "Jarren Duran",
+  "age": 28,
+  "pa": 696,
+  "target": 0.02195249503878821,
+  "marcel": 0.031384762159067714,
+  "last_obs": 6166,
+  "target_age_idx": 10
+ },
+ {
+  "player_id": 680777,
+  "player_name": "Ryan Jeffers",
+  "age": 28,
+  "pa": 464,
+  "target": 0.020036495038788182,
+  "marcel": 0.01388048010409254,
+  "last_obs": 6171,
+  "target_age_idx": 10
+ },
+ {
+  "player_id": 680779,
+  "player_name": "Henry Davis",
+  "age": 25,
+  "pa": 283,
+  "target": -0.0836335049612118,
+  "marcel": -0.025350236336462273,
+  "last_obs": 6173,
+  "target_age_idx": 7
+ },
+ {
+  "player_id": 680869,
+  "player_name": "Zack Gelof",
+  "age": 25,
+  "pa": 101,
+  "target": -0.0893225049612118,
+  "marcel": -0.001698213878743915,
+  "last_obs": 6177,
+  "target_age_idx": 7
+ },
+ {
+  "player_id": 680977,
+  "player_name": "Brendan Donovan",
+  "age": 28,
+  "pa": 515,
+  "target": 0.023914495038788175,
+  "marcel": 0.024530739792560152,
+  "last_obs": 6185,
+  "target_age_idx": 10
+ },
+ {
+  "player_id": 681082,
+  "player_name": "Bryson Stott",
+  "age": 27,
+  "pa": 560,
+  "target": 0.002108495038788183,
+  "marcel": -0.003605622717726853,
+  "last_obs": 6188,
+  "target_age_idx": 9
+ },
+ {
+  "player_id": 681146,
+  "player_name": "Jonah Bride",
+  "age": 29,
+  "pa": 125,
+  "target": -0.11081750496121182,
+  "marcel": -0.002379111465134698,
+  "last_obs": 6191,
+  "target_age_idx": 11
+ },
+ {
+  "player_id": 681297,
+  "player_name": "Colton Cowser",
+  "age": 25,
+  "pa": 360,
+  "target": -0.027750504961211786,
+  "marcel": 0.014890211170414058,
+  "last_obs": 6193,
+  "target_age_idx": 7
+ },
+ {
+  "player_id": 681351,
+  "player_name": "Logan O'Hoppe",
+  "age": 25,
+  "pa": 451,
+  "target": -0.039631504961211816,
+  "marcel": 0.011179287450658881,
+  "last_obs": 6196,
+  "target_age_idx": 7
+ },
+ {
+  "player_id": 681393,
+  "player_name": "Connor Norby",
+  "age": 25,
+  "pa": 337,
+  "target": -0.013069504961211786,
+  "marcel": 0.009988169982583228,
+  "last_obs": 6197,
+  "target_age_idx": 7
+ },
+ {
+  "player_id": 681460,
+  "player_name": "Brooks Baldwin",
+  "age": 24,
+  "pa": 328,
+  "target": -0.011472504961211827,
+  "marcel": -0.011786586064371551,
+  "last_obs": 6198,
+  "target_age_idx": 6
+ },
+ {
+  "player_id": 681481,
+  "player_name": "Kerry Carpenter",
+  "age": 27,
+  "pa": 464,
+  "target": 0.0214154950387882,
+  "marcel": 0.041781404358638974,
+  "last_obs": 6201,
+  "target_age_idx": 9
+ },
+ {
+  "player_id": 681508,
+  "player_name": "Mickey Gasper",
+  "age": 29,
+  "pa": 110,
+  "target": -0.0837635049612118,
+  "marcel": -0.013910139756051043,
+  "last_obs": 6202,
+  "target_age_idx": 11
+ },
+ {
+  "player_id": 681546,
+  "player_name": "James Outman",
+  "age": 28,
+  "pa": 148,
+  "target": -0.07589950496121181,
+  "marcel": 0.006205543103636413,
+  "last_obs": 6206,
+  "target_age_idx": 10
+ },
+ {
+  "player_id": 681624,
+  "player_name": "Andy Pages",
+  "age": 24,
+  "pa": 624,
+  "target": 0.018817495038788212,
+  "marcel": 0.00911623352362012,
+  "last_obs": 6210,
+  "target_age_idx": 6
+ },
+ {
+  "player_id": 681807,
+  "player_name": "David Fry",
+  "age": 29,
+  "pa": 157,
+  "target": -0.055478504961211816,
+  "marcel": 0.020440114883384097,
+  "last_obs": 6212,
+  "target_age_idx": 11
+ },
+ {
+  "player_id": 681962,
+  "player_name": "Vinny Capra",
+  "age": 28,
+  "pa": 105,
+  "target": -0.1627865049612118,
+  "marcel": -0.009800892064055988,
+  "last_obs": 6215,
+  "target_age_idx": 10
+ },
+ {
+  "player_id": 682177,
+  "player_name": "Daniel Schneemann",
+  "age": 28,
+  "pa": 422,
+  "target": -0.03263850496121179,
+  "marcel": -0.005358455040569532,
+  "last_obs": 6222,
+  "target_age_idx": 10
+ },
+ {
+  "player_id": 682622,
+  "player_name": "Noelvi Marte",
+  "age": 23,
+  "pa": 360,
+  "target": 0.008070495038788206,
+  "marcel": -0.011097747239903144,
+  "last_obs": 6228,
+  "target_age_idx": 5
+ },
+ {
+  "player_id": 682626,
+  "player_name": "Francisco Alvarez",
+  "age": 23,
+  "pa": 277,
+  "target": 0.02983449503878821,
+  "marcel": 0.008071883894264997,
+  "last_obs": 6231,
+  "target_age_idx": 5
+ },
+ {
+  "player_id": 682641,
+  "player_name": "Luis Matos",
+  "age": 23,
+  "pa": 184,
+  "target": -0.017416504961211776,
+  "marcel": -0.013358275805651076,
+  "last_obs": 6234,
+  "target_age_idx": 5
+ },
+ {
+  "player_id": 682657,
+  "player_name": "Angel Martínez",
+  "age": 23,
+  "pa": 484,
+  "target": -0.03943050496121181,
+  "marcel": -0.0009895758784438935,
+  "last_obs": 6235,
+  "target_age_idx": 5
+ },
+ {
+  "player_id": 682668,
+  "player_name": "Luisangel Acuña",
+  "age": 23,
+  "pa": 193,
+  "target": -0.05551050496121179,
+  "marcel": 0.025387769826153483,
+  "last_obs": 6236,
+  "target_age_idx": 5
+ },
+ {
+  "player_id": 682729,
+  "player_name": "Jonatan Clase",
+  "age": 23,
+  "pa": 112,
+  "target": -0.04655450496121183,
+  "marcel": 0.005072146371355668,
+  "last_obs": 6237,
+  "target_age_idx": 5
+ },
+ {
+  "player_id": 682829,
+  "player_name": "Elly De La Cruz",
+  "age": 23,
+  "pa": 699,
+  "target": 0.019439495038788224,
+  "marcel": 0.02912085847977769,
+  "last_obs": 6239,
+  "target_age_idx": 5
+ },
+ {
+  "player_id": 682928,
+  "player_name": "CJ Abrams",
+  "age": 24,
+  "pa": 635,
+  "target": 0.010554495038788192,
+  "marcel": 0.005011072205898914,
+  "last_obs": 6244,
+  "target_age_idx": 6
+ },
+ {
+  "player_id": 682985,
+  "player_name": "Riley Greene",
+  "age": 24,
+  "pa": 655,
+  "target": 0.030198495038788187,
+  "marcel": 0.03369998033706567,
+  "last_obs": 6247,
+  "target_age_idx": 6
+ },
+ {
+  "player_id": 682988,
+  "player_name": "Tyler Locklear",
+  "age": 24,
+  "pa": 116,
+  "target": -0.0680105049612118,
+  "marcel": -0.003207110827627535,
+  "last_obs": 6248,
+  "target_age_idx": 6
+ },
+ {
+  "player_id": 682998,
+  "player_name": "Corbin Carroll",
+  "age": 24,
+  "pa": 642,
+  "target": 0.05839949503878822,
+  "marcel": 0.0367445860391743,
+  "last_obs": 6251,
+  "target_age_idx": 6
+ },
+ {
+  "player_id": 683002,
+  "player_name": "Gunnar Henderson",
+  "age": 24,
+  "pa": 651,
+  "target": 0.026294495038788224,
+  "marcel": 0.054645193660113556,
+  "last_obs": 6254,
+  "target_age_idx": 6
+ },
+ {
+  "player_id": 683011,
+  "player_name": "Anthony Volpe",
+  "age": 24,
+  "pa": 596,
+  "target": -0.026765504961211828,
+  "marcel": -0.012013016151107725,
+  "last_obs": 6256,
+  "target_age_idx": 6
+ },
+ {
+  "player_id": 683146,
+  "player_name": "Brett Baty",
+  "age": 25,
+  "pa": 432,
+  "target": 0.01057249503878821,
+  "marcel": -0.023266628162752767,
+  "last_obs": 6263,
+  "target_age_idx": 7
+ },
+ {
+  "player_id": 683734,
+  "player_name": "Andrew Vaughn",
+  "age": 27,
+  "pa": 447,
+  "target": -0.0017715049612118117,
+  "marcel": 0.005616136831535001,
+  "last_obs": 6267,
+  "target_age_idx": 9
+ },
+ {
+  "player_id": 683737,
+  "player_name": "Michael Busch",
+  "age": 27,
+  "pa": 592,
+  "target": 0.055496495038788174,
+  "marcel": 0.015168041785027786,
+  "last_obs": 6269,
+  "target_age_idx": 9
+ },
+ {
+  "player_id": 686217,
+  "player_name": "Sal Frelick",
+  "age": 25,
+  "pa": 594,
+  "target": 0.01916549503878817,
+  "marcel": -0.004582735626075252,
+  "last_obs": 6272,
+  "target_age_idx": 7
+ },
+ {
+  "player_id": 686469,
+  "player_name": "Vinnie Pasquantino",
+  "age": 27,
+  "pa": 682,
+  "target": 0.026712495038788198,
+  "marcel": 0.020542545129312972,
+  "last_obs": 6277,
+  "target_age_idx": 9
+ },
+ {
+  "player_id": 686527,
+  "player_name": "Dominic Canzone",
+  "age": 27,
+  "pa": 269,
+  "target": 0.04952149503878822,
+  "marcel": -0.015724958881142392,
+  "last_obs": 6281,
+  "target_age_idx": 9
+ },
+ {
+  "player_id": 686555,
+  "player_name": "Isaac Collins",
+  "age": 27,
+  "pa": 441,
+  "target": 0.0313204950387882,
+  "marcel": -0.007001519021243741,
+  "last_obs": 6284,
+  "target_age_idx": 9
+ },
+ {
+  "player_id": 686611,
+  "player_name": "Dylan Crews",
+  "age": 23,
+  "pa": 322,
+  "target": -0.03376750496121178,
+  "marcel": 0.0010995160284417715,
+  "last_obs": 6285,
+  "target_age_idx": 5
+ },
+ {
+  "player_id": 686668,
+  "player_name": "Brenton Doyle",
+  "age": 27,
+  "pa": 538,
+  "target": -0.0309825049612118,
+  "marcel": -0.005067458898046162,
+  "last_obs": 6287,
+  "target_age_idx": 9
+ },
+ {
+  "player_id": 686681,
+  "player_name": "Michael Massey",
+  "age": 27,
+  "pa": 277,
+  "target": -0.05871250496121183,
+  "marcel": -0.007277307987810067,
+  "last_obs": 6293,
+  "target_age_idx": 9
+ },
+ {
+  "player_id": 686765,
+  "player_name": "Nick Sogard",
+  "age": 27,
+  "pa": 104,
+  "target": -0.01847750496121181,
+  "marcel": -0.0019840534721631276,
+  "last_obs": 6295,
+  "target_age_idx": 9
+ },
+ {
+  "player_id": 686780,
+  "player_name": "Pedro Pagés",
+  "age": 26,
+  "pa": 389,
+  "target": -0.03751050496121178,
+  "marcel": -0.006265182538829017,
+  "last_obs": 6296,
+  "target_age_idx": 8
+ },
+ {
+  "player_id": 686797,
+  "player_name": "Brooks Lee",
+  "age": 24,
+  "pa": 527,
+  "target": -0.02746850496121178,
+  "marcel": -0.0166231586937447,
+  "last_obs": 6297,
+  "target_age_idx": 6
+ },
+ {
+  "player_id": 687231,
+  "player_name": "Darell Hernaiz",
+  "age": 23,
+  "pa": 197,
+  "target": -0.04688650496121183,
+  "marcel": -0.01853059151445907,
+  "last_obs": 6307,
+  "target_age_idx": 5
+ },
+ {
+  "player_id": 687263,
+  "player_name": "Zach Neto",
+  "age": 24,
+  "pa": 554,
+  "target": 0.024008495038788213,
+  "marcel": 0.016493510717423887,
+  "last_obs": 6309,
+  "target_age_idx": 6
+ },
+ {
+  "player_id": 687363,
+  "player_name": "Victor Scott II",
+  "age": 24,
+  "pa": 463,
+  "target": -0.03898650496121181,
+  "marcel": -0.026846873172537755,
+  "last_obs": 6310,
+  "target_age_idx": 6
+ },
+ {
+  "player_id": 687401,
+  "player_name": "Joey Ortiz",
+  "age": 26,
+  "pa": 506,
+  "target": -0.04994750496121181,
+  "marcel": 0.006821568691896318,
+  "last_obs": 6312,
+  "target_age_idx": 8
+ },
+ {
+  "player_id": 687462,
+  "player_name": "Spencer Horwitz",
+  "age": 27,
+  "pa": 411,
+  "target": 0.030436495038788203,
+  "marcel": 0.023866601616990946,
+  "last_obs": 6314,
+  "target_age_idx": 9
+ },
+ {
+  "player_id": 687597,
+  "player_name": "Jordan Beck",
+  "age": 24,
+  "pa": 588,
+  "target": 0.0058884950387881885,
+  "marcel": -0.0260696482117575,
+  "last_obs": 6316,
+  "target_age_idx": 6
+ },
+ {
+  "player_id": 687952,
+  "player_name": "Christian Encarnacion-Strand",
+  "age": 25,
+  "pa": 137,
+  "target": -0.0521345049612118,
+  "marcel": -0.002348291388330037,
+  "last_obs": 6320,
+  "target_age_idx": 7
+ },
+ {
+  "player_id": 688363,
+  "player_name": "Graham Pauley",
+  "age": 24,
+  "pa": 184,
+  "target": -0.012903504961211787,
+  "marcel": -0.006007294622158932,
+  "last_obs": 6322,
+  "target_age_idx": 6
+ },
+ {
+  "player_id": 690993,
+  "player_name": "Colt Keith",
+  "age": 23,
+  "pa": 468,
+  "target": 0.012444495038788195,
+  "marcel": 0.004421081116704639,
+  "last_obs": 6326,
+  "target_age_idx": 5
+ },
+ {
+  "player_id": 691016,
+  "player_name": "Tyler Soderstrom",
+  "age": 23,
+  "pa": 624,
+  "target": 0.04043249503878821,
+  "marcel": -0.004942252800597791,
+  "last_obs": 6329,
+  "target_age_idx": 5
+ },
+ {
+  "player_id": 691023,
+  "player_name": "Jordan Walker",
+  "age": 23,
+  "pa": 396,
+  "target": -0.05286450496121181,
+  "marcel": 0.012533142886040904,
+  "last_obs": 6331,
+  "target_age_idx": 5
+ },
+ {
+  "player_id": 691026,
+  "player_name": "Masyn Winn",
+  "age": 23,
+  "pa": 537,
+  "target": -0.015753504961211806,
+  "marcel": 0.0023975718749175146,
+  "last_obs": 6333,
+  "target_age_idx": 5
+ },
+ {
+  "player_id": 691176,
+  "player_name": "Jasson Domínguez",
+  "age": 22,
+  "pa": 429,
+  "target": 0.002803495038788184,
+  "marcel": 0.014873020835417083,
+  "last_obs": 6335,
+  "target_age_idx": 4
+ },
+ {
+  "player_id": 691182,
+  "player_name": "Adael Amador",
+  "age": 22,
+  "pa": 128,
+  "target": -0.07535050496121179,
+  "marcel": -0.005044311845030236,
+  "last_obs": 6336,
+  "target_age_idx": 4
+ },
+ {
+  "player_id": 691406,
+  "player_name": "Junior Caminero",
+  "age": 21,
+  "pa": 653,
+  "target": 0.0434204950387882,
+  "marcel": 0.01179474826206689,
+  "last_obs": 6338,
+  "target_age_idx": 3
+ },
+ {
+  "player_id": 691594,
+  "player_name": "Javier Sanoja",
+  "age": 22,
+  "pa": 342,
+  "target": -0.01868050496121182,
+  "marcel": 0.0030204963288827935,
+  "last_obs": 6339,
+  "target_age_idx": 4
+ },
+ {
+  "player_id": 691718,
+  "player_name": "Pete Crow-Armstrong",
+  "age": 23,
+  "pa": 647,
+  "target": 0.010305495038788193,
+  "marcel": -0.0066349351801846534,
+  "last_obs": 6341,
+  "target_age_idx": 5
+ },
+ {
+  "player_id": 691723,
+  "player_name": "Coby Mayo",
+  "age": 23,
+  "pa": 294,
+  "target": -0.010391504961211828,
+  "marcel": -0.015062019754132794,
+  "last_obs": 6342,
+  "target_age_idx": 5
+ },
+ {
+  "player_id": 693304,
+  "player_name": "Nick Gonzales",
+  "age": 26,
+  "pa": 408,
+  "target": -0.024233504961211794,
+  "marcel": -0.0032216901491280425,
+  "last_obs": 6347,
+  "target_age_idx": 8
+ },
+ {
+  "player_id": 693307,
+  "player_name": "Dillon Dingler",
+  "age": 26,
+  "pa": 469,
+  "target": 0.013021495038788189,
+  "marcel": -0.019679431278919135,
+  "last_obs": 6348,
+  "target_age_idx": 8
+ },
+ {
+  "player_id": 694192,
+  "player_name": "Jackson Chourio",
+  "age": 21,
+  "pa": 589,
+  "target": 0.015372495038788181,
+  "marcel": 0.03593824979523025,
+  "last_obs": 6350,
+  "target_age_idx": 3
+ },
+ {
+  "player_id": 694384,
+  "player_name": "Nolan Schanuel",
+  "age": 23,
+  "pa": 564,
+  "target": 0.013915495038788195,
+  "marcel": 0.016806515331815708,
+  "last_obs": 6357,
+  "target_age_idx": 5
+ },
+ {
+  "player_id": 694388,
+  "player_name": "Joey Loperfido",
+  "age": 26,
+  "pa": 104,
+  "target": 0.0681434950387882,
+  "marcel": -0.016574351714760183,
+  "last_obs": 6358,
+  "target_age_idx": 8
+ },
+ {
+  "player_id": 694497,
+  "player_name": "Evan Carter",
+  "age": 22,
+  "pa": 220,
+  "target": 0.008194495038788219,
+  "marcel": 0.017183550557744343,
+  "last_obs": 6360,
+  "target_age_idx": 4
+ },
+ {
+  "player_id": 694671,
+  "player_name": "Wyatt Langford",
+  "age": 23,
+  "pa": 573,
+  "target": 0.024062495038788212,
+  "marcel": 0.01914052924223686,
+  "last_obs": 6361,
+  "target_age_idx": 5
+ },
+ {
+  "player_id": 695238,
+  "player_name": "Will Wagner",
+  "age": 26,
+  "pa": 149,
+  "target": -0.03344550496121179,
+  "marcel": 0.01403796301623933,
+  "last_obs": 6362,
+  "target_age_idx": 8
+ },
+ {
+  "player_id": 695336,
+  "player_name": "Thomas Saggese",
+  "age": 23,
+  "pa": 295,
+  "target": -0.03068750496121181,
+  "marcel": -0.0004569301461881392,
+  "last_obs": 6364,
+  "target_age_idx": 5
+ },
+ {
+  "player_id": 695578,
+  "player_name": "James Wood",
+  "age": 22,
+  "pa": 689,
+  "target": 0.039715495038788184,
+  "marcel": 0.03248978904716476,
+  "last_obs": 6366,
+  "target_age_idx": 4
+ },
+ {
+  "player_id": 696100,
+  "player_name": "Hunter Goodman",
+  "age": 25,
+  "pa": 579,
+  "target": 0.04567649503878818,
+  "marcel": -0.0144201310646207,
+  "last_obs": 6368,
+  "target_age_idx": 7
+ },
+ {
+  "player_id": 696285,
+  "player_name": "Jacob Young",
+  "age": 25,
+  "pa": 364,
+  "target": -0.049084504961211806,
+  "marcel": -0.008096048670327871,
+  "last_obs": 6370,
+  "target_age_idx": 7
+ },
+ {
+  "player_id": 700242,
+  "player_name": "Trey Sweeney",
+  "age": 25,
+  "pa": 326,
+  "target": -0.0685895049612118,
+  "marcel": -0.002978195815251994,
+  "last_obs": 6371,
+  "target_age_idx": 7
+ },
+ {
+  "player_id": 700250,
+  "player_name": "Ben Rice",
+  "age": 26,
+  "pa": 530,
+  "target": 0.045360495038788196,
+  "marcel": -0.012344247269761077,
+  "last_obs": 6372,
+  "target_age_idx": 8
+ },
+ {
+  "player_id": 700932,
+  "player_name": "Kyle Manzardo",
+  "age": 24,
+  "pa": 531,
+  "target": 0.016318495038788183,
+  "marcel": 0.006310363847957801,
+  "last_obs": 6373,
+  "target_age_idx": 6
+ },
+ {
+  "player_id": 701305,
+  "player_name": "Zach Dezenzo",
+  "age": 25,
+  "pa": 109,
+  "target": -0.007490504961211786,
+  "marcel": 0.0014970800765921055,
+  "last_obs": 6374,
+  "target_age_idx": 7
+ },
+ {
+  "player_id": 701538,
+  "player_name": "Jackson Merrill",
+  "age": 22,
+  "pa": 483,
+  "target": 0.018099495038788216,
+  "marcel": 0.04376295916912232,
+  "last_obs": 6375,
+  "target_age_idx": 4
+ },
+ {
+  "player_id": 702616,
+  "player_name": "Jackson Holliday",
+  "age": 21,
+  "pa": 649,
+  "target": -0.008825504961211816,
+  "marcel": -0.013666195964674943,
+  "last_obs": 6377,
+  "target_age_idx": 3
+ },
+ {
+  "player_id": 805373,
+  "player_name": "Nacho Alvarez Jr.",
+  "age": 22,
+  "pa": 208,
+  "target": -0.03407150496121181,
+  "marcel": -0.00924117039257455,
+  "last_obs": 6378,
+  "target_age_idx": 4
+ },
+ {
+  "player_id": 805779,
+  "player_name": "Jacob Wilson",
+  "age": 23,
+  "pa": 523,
+  "target": 0.034787495038788196,
+  "marcel": 0.0022076023579327697,
+  "last_obs": 6379,
+  "target_age_idx": 5
+ },
+ {
+  "player_id": 807799,
+  "player_name": "Masataka Yoshida",
+  "age": 31,
+  "pa": 205,
+  "target": -0.011211504961211816,
+  "marcel": 0.016140522169059424,
+  "last_obs": 6381,
+  "target_age_idx": 13
+ },
+ {
+  "player_id": 808982,
+  "player_name": "Jung Hoo Lee",
+  "age": 26,
+  "pa": 617,
+  "target": 0.006888495038788189,
+  "marcel": -0.004784372052131558,
+  "last_obs": 6382,
+  "target_age_idx": 8
+ }
+]
