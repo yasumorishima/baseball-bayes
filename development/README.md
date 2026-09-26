@@ -11,16 +11,32 @@ posterior sd.
 
 ## Calibration (2025, out of sample)
 
-The pass rule was written into [tracker.py](tracker.py) before its first run:
-share with |z| > 1.645 within [0.07, 0.13] and sd of z within [0.90, 1.10].
+The pass rule is in the docstring of [tracker.py](tracker.py): share with
+|z| > 1.645 within [0.07, 0.13] and sd of z within [0.90, 1.10]. I wrote it
+before running the script, but the repository cannot show that: the rule,
+the script and its output arrived in one commit.
 
 | group | n | outside the 90% interval | sd of z | mean z |
 |---|---|---|---|---|
 | all | 410 | 10.2% | 0.975 | -0.02 |
 | age <= 25 | 94 | 9.6% | 0.944 | 0.00 |
 
-**Pass.** So a z of +2 means what it says: about 1 batter in 40 lands that far
-above his line by chance. Plug-in parameters (posterior means) are used; the
+**Pass**, but read it for what it checks: the two-sided spread. The two tails
+are not even:
+
+| | z > 1.645 | z < -1.645 | z > 2 | z < -2 |
+|---|---|---|---|---|
+| observed (410) | 6.8% | 3.4% | 3.2% | 1.2% |
+| N(0, 1) | 5% | 5% | 2.3% | 2.3% |
+
+More batters beat their line than the sd allows and fewer fall below it. One
+likely reason, not tested here: the 2025 set is batters with 100 PA or more,
+and a batter who slumps tends to lose the playing time that would put him in
+it. So treat a large positive z as less rare than N(0, 1) says, and a large
+negative z as the rarer of the two. The rule is also loose: dropping the
+season-only term tau from the sd would still pass (10.7%, sd 1.016).
+
+Plug-in parameters (posterior means, curve = posterior median) are used; the
 expected values differ from the Stan projection by at most 0.0009.
 
 ## Output
