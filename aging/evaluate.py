@@ -8,6 +8,10 @@ Usage: python evaluate.py <prepared dir> <fit dir> <out dir> [--rehearsal]
 
 --rehearsal prints only the fit diagnostics, the run time and the half-widths
 of the bootstrap intervals: it never prints which method did better.
+
+The fits read are the pair named in selection.json (fit.py). A comparison
+that needs a fit that is not valid is reported as "no valid fit" and gets
+no difference or interval.
 """
 import json
 import pathlib
@@ -37,8 +41,13 @@ def reading(a, b, lo, hi):
 
 def main(prep_dir, fit_dir, out_dir, rehearsal=False):
     ev = json.loads((pathlib.Path(prep_dir) / "eval.json").read_text())
-    fa = json.loads((pathlib.Path(fit_dir) / "fit_aging.json").read_text())
-    f0 = json.loads((pathlib.Path(fit_dir) / "fit_no_aging.json").read_text())
+    fd = pathlib.Path(fit_dir)
+    sel = json.loads((fd / "selection.json").read_text())
+    suffix = {"first": "", "fallback": "_fallback"}[sel["read"]]
+    fa = json.loads((fd / f"fit_aging{suffix}.json").read_text())
+    f0 = json.loads((fd / f"fit_no_aging{suffix}.json").read_text())
+    ok = {"aging": fa["diagnostics"]["valid"], "no_aging": f0["diagnostics"]["valid"],
+          "marcel": True}
     y = np.array([e["target"] for e in ev])
     w = np.array([e["pa"] for e in ev], dtype=float)
     preds = {"aging": np.array(fa["pred_mean"]),
@@ -50,20 +59,27 @@ def main(prep_dir, fit_dir, out_dir, rehearsal=False):
     comps = {}
     for a, b in (("aging", "marcel"), ("aging", "no_aging")):
         for metric, fn in (("wmae", wmae), ("wrmse", wrmse)):
+            if not (ok[a] and ok[b]):
+                comps[f"{a} - {b} ({metric})"] = {"reading": "no valid fit"}
+                continue
             d = fn(err[a][idx], w[idx]) - fn(err[b][idx], w[idx])
             lo, hi = (float(v) for v in np.quantile(d, [0.025, 0.975]))
             comps[f"{a} - {b} ({metric})"] = {
                 "diff": float(fn(err[a], w) - fn(err[b], w)),
                 "ci95": [lo, hi], "half_width": (hi - lo) / 2,
                 "reading": reading(a, b, lo, hi)}
-    diagnostics = {"aging": fa["diagnostics"], "no_aging": f0["diagnostics"]}
+    diagnostics = {"read": sel["read"], "aging": fa["diagnostics"], "no_aging": f0["diagnostics"]}
+    if sel["fallback_run"]:
+        diagnostics["first_run"] = {
+            k: json.loads((fd / f"fit_{k}.json").read_text())["diagnostics"]
+            for k in ("aging", "no_aging")}
     if rehearsal:
         res = {"n_players": len(y), "diagnostics": diagnostics,
-               "ci_half_widths": {k: v["half_width"] for k, v in comps.items()}}
+               "ci_half_widths": {k: v.get("half_width", v["reading"]) for k, v in comps.items()}}
     else:
         res = {"n_players": len(y), "total_pa": float(w.sum()),
-               "wmae": {k: float(wmae(e, w)) for k, e in err.items()},
-               "wrmse": {k: float(wrmse(e, w)) for k, e in err.items()},
+               "wmae": {k: float(wmae(e, w)) for k, e in err.items() if ok[k]},
+               "wrmse": {k: float(wrmse(e, w)) for k, e in err.items() if ok[k]},
                "comparisons": comps, "diagnostics": diagnostics}
     out = pathlib.Path(out_dir)
     out.mkdir(parents=True, exist_ok=True)
