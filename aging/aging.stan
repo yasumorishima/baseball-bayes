@@ -49,8 +49,64 @@ data {
   array[M] int<lower=1, upper=N> last_obs;     // their last training season
   array[M] int<lower=1, upper=K> target_age_idx;
 }
+transformed data {
+  // Sampler coordinates only; the prior on g is unchanged (see model block).
+  // T maps (level, slope, second differences) at unit scale to g, by the
+  // same recursion as below. Hg is a rough data information on g: each
+  // consecutive pair of seasons observes the sum of g over the ages crossed,
+  // with precision from prior-typical sigma_pa 0.5, tau 0.016, sd_step 0.024.
+  // lam, Q: eigen-decomposition of that information on the K - 2 curvature
+  // steps after the level and slope (with their priors) are integrated out.
+  array[K - 2] int cidx;
+  matrix[K, K] T = rep_matrix(0, K, K);
+  matrix[K, K] Hg = rep_matrix(0, K, K);
+  vector[K - 2] lam;
+  matrix[K - 2, K - 2] Q;
+  {
+    int j = 1;
+    for (k in 1:K) {
+      if (k != anchor_idx && k != anchor_idx + 1) {
+        cidx[j] = k;
+        j += 1;
+      }
+    }
+    for (c in 1:K) {
+      vector[K] e = rep_vector(0, K);
+      vector[K] t;
+      e[c] = 1;
+      t[anchor_idx] = e[anchor_idx];
+      t[anchor_idx + 1] = t[anchor_idx] + e[anchor_idx + 1];
+      for (k in (anchor_idx + 2):K) t[k] = 2 * t[k - 1] - t[k - 2] + e[k];
+      for (i in 1:(anchor_idx - 1)) {
+        int k = anchor_idx - i;
+        t[k] = 2 * t[k + 1] - t[k + 2] + e[k];
+      }
+      T[:, c] = t;
+    }
+    for (n in 2:N) {
+      if (!is_first[n]) {
+        int a = prev_age_idx[n] + 1;
+        int b = age_idx[n];
+        real w = 1 / (0.25 / pa[n - 1] + 0.25 / pa[n] + 2 * square(0.016)
+                      + square(0.024) * years[n]);
+        Hg[a:b, a:b] += w;
+      }
+    }
+    matrix[K, K] Hz = T' * Hg * T;
+    array[2] int nidx = {anchor_idx, anchor_idx + 1};
+    matrix[2, 2] Hnn = Hz[nidx, nidx]
+                       + diag_matrix([1 / square(0.02), 1 / square(0.01)]');
+    matrix[K - 2, K - 2] S = Hz[cidx, cidx]
+                             - Hz[cidx, nidx] * mdivide_left_spd(Hnn, Hz[nidx, cidx]);
+    S = 0.5 * (S + S');
+    tuple(matrix[K - 2, K - 2], vector[K - 2]) eg = eigendecompose_sym(S);
+    lam = fmax(eg.2, 0);
+    Q = eg.1;
+  }
+}
 parameters {
-  vector[K] g_z;
+  vector[2] ls_z;          // level and slope at the anchor, unit scale
+  vector[K - 2] mode_z;    // curvature modes (columns of Q), see model block
   real<lower=0> sd_g_raw;
   real mu_entry_raw;
   real b_entry_raw;
@@ -69,17 +125,25 @@ transformed parameters {
   real tau = 0.02 * tau_raw;
   vector[K] g;
   vector[K] cum;
-  // g_z[anchor_idx] and g_z[anchor_idx + 1] carry the level and slope. Every
-  // other g_z[k] is a second difference of g: centred at k - 1 above the
-  // anchor, at k + 1 below it.
-  g[anchor_idx] = 0.02 * g_z[anchor_idx];
-  g[anchor_idx + 1] = g[anchor_idx] + 0.01 * g_z[anchor_idx + 1];
+  // Curvature steps d (the second differences of g, in the order of cidx)
+  // are d = Q * u with u[j] = sd_g * mode_z[j] / sqrt(1 + lam[j] * sd_g^2).
+  // With mode_z[j] ~ normal(0, sqrt(1 + lam[j] * sd_g^2)) this is exactly
+  // u ~ normal(0, sd_g) iid, and Q is orthogonal, so d ~ normal(0, sd_g) iid
+  // as before. The divisor keeps each mode_z near unit posterior scale
+  // whether the data or the prior dominates that mode.
+  vector[K] dz = rep_vector(0, K);   // zero at the anchor slots
+  {
+    vector[K - 2] f = sqrt(1 + lam * square(sd_g));
+    dz[cidx] = Q * (sd_g * mode_z ./ f);
+  }
+  g[anchor_idx] = 0.02 * ls_z[1];
+  g[anchor_idx + 1] = g[anchor_idx] + 0.01 * ls_z[2];
   for (k in (anchor_idx + 2):K) {
-    g[k] = 2 * g[k - 1] - g[k - 2] + sd_g * g_z[k];
+    g[k] = 2 * g[k - 1] - g[k - 2] + dz[k];
   }
   for (j in 1:(anchor_idx - 1)) {
     int k = anchor_idx - j;
-    g[k] = 2 * g[k + 1] - g[k + 2] + sd_g * g_z[k];
+    g[k] = 2 * g[k + 1] - g[k + 2] + dz[k];
   }
   cum = cumulative_sum(g);
 }
@@ -88,7 +152,8 @@ model {
   // b_entry ~ normal(0, 0.01), sd_entry ~ half-normal(0, 0.05),
   // sd_step ~ half-normal(0, 0.03), sigma_pa ~ normal+(0.5, 0.2),
   // tau ~ half-normal(0, 0.02).
-  g_z ~ std_normal();
+  ls_z ~ std_normal();
+  mode_z ~ normal(0, sqrt(1 + lam * square(sd_g)));
   sd_g_raw ~ std_normal();
   mu_entry_raw ~ std_normal();
   b_entry_raw ~ std_normal();
