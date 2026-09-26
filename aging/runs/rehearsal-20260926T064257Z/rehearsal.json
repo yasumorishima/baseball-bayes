@@ -1,0 +1,41 @@
+{
+ "n_players": 416,
+ "diagnostics": {
+  "aging": {
+   "divergences": 0,
+   "divergences_per_chain": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "max_treedepth_hits": 0,
+   "max_rhat": 1.00487,
+   "min_ess_bulk": 1480.52,
+   "seconds": 169.3,
+   "fallback": false,
+   "valid": true
+  },
+  "no_aging": {
+   "divergences": 0,
+   "divergences_per_chain": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "max_treedepth_hits": 0,
+   "max_rhat": 1.00375,
+   "min_ess_bulk": 1324.23,
+   "seconds": 148.3,
+   "fallback": false,
+   "valid": true
+  }
+ },
+ "ci_half_widths": {
+  "aging - marcel (wmae)": 0.0009796738357149481,
+  "aging - marcel (wrmse)": 0.001118377723748407,
+  "aging - no_aging (wmae)": 0.0006915395647205881,
+  "aging - no_aging (wrmse)": 0.000735276551071811
+ }
+}
