@@ -1,0 +1,109 @@
+name: Aging curve
+
+# Runs the pre-registered aging-curve test in aging/ (see aging/PREREG.md).
+# mode=rehearsal: train <= 2023, project 2024; commits diagnostics, run time
+#   and bootstrap half-widths only, never which method did better.
+# mode=final: train <= 2024, project 2025; commits the full results.
+# fallback=true is the single pre-declared fallback for an invalid fit.
+
+on:
+  workflow_dispatch:
+    inputs:
+      memo:
+        description: "Execution intent (required for manual runs)"
+        required: true
+        type: string
+      mode:
+        description: "rehearsal or final"
+        required: true
+        type: choice
+        options: [rehearsal, final]
+      fallback:
+        description: "Use the pre-declared fallback sampler settings"
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: aging
+  cancel-in-progress: false
+
+env:
+  CMDSTAN_VERSION: "2.40.0"
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: requirements.txt
+
+      - run: pip install -r requirements.txt
+
+      - name: Cache CmdStan
+        id: cmdstan-cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cmdstan
+          key: cmdstan-${{ env.CMDSTAN_VERSION }}-${{ runner.os }}
+
+      - name: Install CmdStan
+        if: steps.cmdstan-cache.outputs.cache-hit != 'true'
+        run: python -c "import cmdstanpy; cmdstanpy.install_cmdstan(version='${{ env.CMDSTAN_VERSION }}', cores=4, progress=False)"
+
+      - name: Resolve the input revision
+        id: rev
+        run: |
+          sha=$(curl --fail --max-time 30 -sS https://huggingface.co/api/datasets/yasumorishima/mlb-stats/revision/main | jq -r .sha)
+          [[ "$sha" =~ ^[0-9a-f]{40}$ ]] || { echo "bad revision: $sha"; exit 1; }
+          echo "sha=$sha" >> "$GITHUB_OUTPUT"
+
+      - name: Prepare
+        working-directory: aging
+        run: |
+          src="https://huggingface.co/datasets/yasumorishima/mlb-stats/resolve/${{ steps.rev.outputs.sha }}/marts/mart_batter_season.parquet"
+          if [ "${{ inputs.mode }}" = rehearsal ]; then
+            python prepare.py "$src" work/prep 2023 2024
+          else
+            python prepare.py "$src" work/prep 2024 2025
+          fi
+
+      - name: Fit
+        working-directory: aging
+        run: python fit.py work/prep work/fit ${{ inputs.fallback && '--fallback' || '' }}
+
+      - name: Evaluate
+        working-directory: aging
+        run: python evaluate.py work/prep work/fit work/eval ${{ inputs.mode == 'rehearsal' && '--rehearsal' || '' }}
+
+      - name: Commit the run
+        working-directory: aging
+        env:
+          MEMO: ${{ inputs.memo }}
+        run: |
+          stamp="$(date -u +%Y%m%dT%H%M%SZ)"
+          dir="runs/${{ inputs.mode }}${{ inputs.fallback && '-fallback' || '' }}-$stamp"
+          mkdir -p "$dir"
+          cp work/prep/meta.json "$dir/"
+          jq -n --arg rev "${{ steps.rev.outputs.sha }}" --arg commit "$GITHUB_SHA" \
+                --arg memo "$MEMO" --arg run "$GITHUB_RUN_ID" \
+            '{input_dataset_revision: $rev, code_commit: $commit, run_id: $run, memo: $memo}' > "$dir/run.json"
+          if [ "${{ inputs.mode }}" = rehearsal ]; then
+            cp work/eval/rehearsal.json "$dir/"
+          else
+            cp work/eval/results.json work/fit/fit_aging.json work/fit/fit_no_aging.json work/prep/eval.json "$dir/"
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$dir"
+          git commit -m "aging: ${{ inputs.mode }} run $stamp"
+          git push
