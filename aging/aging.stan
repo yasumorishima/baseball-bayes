@@ -1,4 +1,5 @@
-// Dynamic hierarchical aging curve for MLB batters.
+// Dynamic hierarchical aging curve for MLB batters, with the latent talent
+// integrated out by a Kalman filter.
 //
 // Each batter has a latent talent (wOBA above the league average of that
 // season). From one observed season to the next it moves by the population
@@ -7,11 +8,15 @@
 // wOBA is talent plus two noises: sampling noise that shrinks with PA, and a
 // season-only deviation (tau) that does not carry over to the next season.
 //
+// The model is linear and Gaussian given the parameters, so the likelihood
+// of each player's seasons is computed exactly by a Kalman filter instead of
+// sampling one latent talent per player-season (the first rehearsal did that
+// and had 138 divergent transitions).
+//
 // For k >= 2, g[k] is the average change in talent from age A_min + k - 2 to
 // A_min + k - 1. cum = cumulative_sum(g) is the aging curve up to a constant;
 // only differences of cum enter the likelihood, so g[1] only anchors the
-// smoothing prior. g follows a second-order random walk so the curve is
-// smooth without fixing its shape.
+// smoothing prior. g follows a second-order random walk.
 data {
   int<lower=1> N;                              // player-seasons, sorted by player then season
   int<lower=1> K;                              // number of integer ages
@@ -37,26 +42,16 @@ parameters {
   real<lower=0> sd_step;
   real<lower=0> sigma_pa;
   real<lower=0> tau;
-  vector[N] z;
 }
 transformed parameters {
   vector[K] g;
   vector[K] cum;
-  vector[N] talent;
   g[1] = 0.02 * g_z[1];
   g[2] = g[1] + 0.01 * g_z[2];
   for (k in 3:K) {
     g[k] = 2 * g[k - 1] - g[k - 2] + sd_g * g_z[k];
   }
   cum = cumulative_sum(g);
-  for (n in 1:N) {
-    if (is_first[n]) {
-      talent[n] = mu_entry + b_entry * entry_age_c[n] + sd_entry * z[n];
-    } else {
-      real drift = use_aging ? cum[age_idx[n]] - cum[prev_age_idx[n]] : 0;
-      talent[n] = talent[n - 1] + drift + sd_step * sqrt(years[n]) * z[n];
-    }
-  }
 }
 model {
   g_z ~ std_normal();
@@ -67,16 +62,51 @@ model {
   sd_step ~ normal(0, 0.03);
   sigma_pa ~ normal(0.5, 0.2);
   tau ~ normal(0, 0.02);
-  z ~ std_normal();
-  y ~ normal(talent, sqrt(square(sigma_pa) ./ pa + square(tau)));
+  {
+    real m = 0;   // predicted talent mean before seeing y[n]
+    real v = 1;   // and its variance
+    for (n in 1:N) {
+      if (is_first[n]) {
+        m = mu_entry + b_entry * entry_age_c[n];
+        v = square(sd_entry);
+      } else {
+        if (use_aging) m += cum[age_idx[n]] - cum[prev_age_idx[n]];
+        v += square(sd_step) * years[n];
+      }
+      real r = square(sigma_pa) / pa[n] + square(tau);
+      target += normal_lpdf(y[n] | m, sqrt(v + r));
+      real gain = v / (v + r);
+      m += gain * (y[n] - m);
+      v *= 1 - gain;
+    }
+  }
 }
 generated quantities {
-  // Projection for a season not in the data: the mean talent after the aging
-  // drift from the last observed age to the target age.
+  // Projection for a season not in the data: the filtered talent mean after
+  // the player's last training season, plus the aging drift to the target age.
   vector[M] pred;
-  for (m in 1:M) {
-    int n = last_obs[m];
-    pred[m] = talent[n]
-              + (use_aging ? cum[target_age_idx[m]] - cum[age_idx[n]] : 0);
+  {
+    vector[N] m_filt;
+    real m = 0;
+    real v = 1;
+    for (n in 1:N) {
+      if (is_first[n]) {
+        m = mu_entry + b_entry * entry_age_c[n];
+        v = square(sd_entry);
+      } else {
+        if (use_aging) m += cum[age_idx[n]] - cum[prev_age_idx[n]];
+        v += square(sd_step) * years[n];
+      }
+      real r = square(sigma_pa) / pa[n] + square(tau);
+      real gain = v / (v + r);
+      m += gain * (y[n] - m);
+      v *= 1 - gain;
+      m_filt[n] = m;
+    }
+    for (j in 1:M) {
+      int n = last_obs[j];
+      pred[j] = m_filt[n]
+                + (use_aging ? cum[target_age_idx[j]] - cum[age_idx[n]] : 0);
+    }
   }
 }

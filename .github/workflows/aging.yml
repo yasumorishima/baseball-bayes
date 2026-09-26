@@ -77,6 +77,13 @@ jobs:
             python prepare.py "$src" work/prep 2024 2025
           fi
 
+      # Rehearsal only: the model must recover known parameters from data
+      # simulated on the real structure before its fit on real data counts.
+      - name: Simulation check
+        if: inputs.mode == 'rehearsal'
+        working-directory: aging
+        run: python simcheck.py work/prep work/sim
+
       - name: Fit
         working-directory: aging
         run: python fit.py work/prep work/fit ${{ inputs.fallback && '--fallback' || '' }}
@@ -98,7 +105,7 @@ jobs:
                 --arg memo "$MEMO" --arg run "$GITHUB_RUN_ID" \
             '{input_dataset_revision: $rev, code_commit: $commit, run_id: $run, memo: $memo}' > "$dir/run.json"
           if [ "${{ inputs.mode }}" = rehearsal ]; then
-            cp work/eval/rehearsal.json "$dir/"
+            cp work/eval/rehearsal.json work/sim/simcheck.json "$dir/"
           else
             cp work/eval/results.json work/fit/fit_aging.json work/fit/fit_no_aging.json work/prep/eval.json "$dir/"
           fi
