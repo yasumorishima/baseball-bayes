@@ -1,0 +1,6 @@
+{
+  "input_dataset_revision": "7746d62815359a23ead7128a3a337a42633401f8",
+  "code_commit": "40266496eb02320fdd0b4e3a9f93662d2ab62dec",
+  "run_id": "36227691942",
+  "memo": "rehearsal 10: frozen-candidate code (in-job fallback, pinned revision) end to end"
+}
