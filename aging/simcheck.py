@@ -80,6 +80,57 @@ def players(d):
     return out
 
 
+RAW = ["sd_g_raw", "tau_raw", "sd_step_raw", "sd_entry_raw", "sigma_pa_raw",
+       "mu_entry_raw", "b_entry_raw"]
+
+
+def divergence_report(f, ages):
+    """Where in parameter space the divergent transitions are.
+
+    For each unconstrained coordinate the sampler sees, compare the draws
+    that ended in a divergence with the rest: medians, and the difference in
+    medians in units of the non-divergent sd. Scale parameters are compared
+    on the log scale, which is the scale the sampler moves on. Also returns
+    per-chain step size, tree-depth hits and divergences, and for g_z the ages
+    ranked by that standardized difference.
+    """
+    div = f.method_variables()["divergent__"].astype(bool)      # (draws, chains)
+    depth = f.method_variables()["treedepth__"]
+    step = f.method_variables()["stepsize__"]
+    flat = div.T.reshape(-1)                                     # chain-major, as draws_pd
+    rep = {"n_divergent": int(flat.sum()),
+           "per_chain": [{"divergent": int(div[:, c].sum()),
+                          "stepsize": float(step[0, c]),
+                          "treedepth_max": int(depth[:, c].max()),
+                          "at_max_treedepth": int((depth[:, c] >= f.metadata.cmdstan_config.get("max_depth", 10)).sum())}
+                         for c in range(div.shape[1])]}
+    if flat.sum() == 0:
+        return rep
+
+    def cmp(x):
+        a, b = x[flat], x[~flat]
+        sd = float(np.std(b)) or float("nan")
+        return {"median_div": float(np.median(a)), "median_ok": float(np.median(b)),
+                "q10_ok": float(np.quantile(b, 0.1)), "q90_ok": float(np.quantile(b, 0.9)),
+                "std_diff": (float(np.median(a)) - float(np.median(b))) / sd}
+
+    rep["scalars_log"] = {k: cmp(np.log(f.stan_variable(k).reshape(-1))) if k in RAW[:5]
+                          else cmp(f.stan_variable(k).reshape(-1)) for k in RAW}
+    gz = f.stan_variable("g_z")                                  # (draws, K)
+    per = [dict(age=int(ages[k]), **cmp(gz[:, k])) for k in range(gz.shape[1])]
+    rep["g_z_top"] = sorted(per, key=lambda r: -abs(r["std_diff"]))[:8]
+    # does the divergence sit where the curvature prior is tight (small sd_g)?
+    lg = np.log(f.stan_variable("sd_g_raw").reshape(-1))
+    rep["div_rate_by_sd_g_quartile"] = [
+        float(flat[(lg >= lo) & (lg <= hi)].mean())
+        for lo, hi in zip(np.quantile(lg, [0, .25, .5, .75]), np.quantile(lg, [.25, .5, .75, 1]))]
+    lt = np.log(f.stan_variable("tau_raw").reshape(-1))
+    rep["div_rate_by_tau_quartile"] = [
+        float(flat[(lt >= lo) & (lt <= hi)].mean())
+        for lo, hi in zip(np.quantile(lt, [0, .25, .5, .75]), np.quantile(lt, [.25, .5, .75, 1]))]
+    return rep
+
+
 def main(prep_dir, out_dir):
     prep = pathlib.Path(prep_dir)
     d = json.loads((prep / "stan_data.json").read_text())
@@ -129,7 +180,8 @@ def main(prep_dir, out_dir):
            "divergences": int(np.sum(f.divergences)),
            "divergences_per_chain": [int(x) for x in f.divergences],
            "curve_coverage_21_40": curve_cov,
-           "scalars": scalars}
+           "scalars": scalars,
+           "divergence_report": divergence_report(f, ages)}
     res["pass"] = (res["divergences"] == 0 and curve_cov >= 0.8
                    and all(s["covered"] for s in scalars.values()))
     out = pathlib.Path(out_dir)
