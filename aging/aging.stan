@@ -69,8 +69,9 @@ transformed parameters {
   real tau = 0.02 * tau_raw;
   vector[K] g;
   vector[K] cum;
-  // g_z[anchor_idx] and g_z[anchor_idx + 1] carry the level and slope; every
-  // other g_z[k] is the curvature step that reaches age index k.
+  // g_z[anchor_idx] and g_z[anchor_idx + 1] carry the level and slope. Every
+  // other g_z[k] is a second difference of g: centred at k - 1 above the
+  // anchor, at k + 1 below it.
   g[anchor_idx] = 0.02 * g_z[anchor_idx];
   g[anchor_idx + 1] = g[anchor_idx] + 0.01 * g_z[anchor_idx + 1];
   for (k in (anchor_idx + 2):K) {

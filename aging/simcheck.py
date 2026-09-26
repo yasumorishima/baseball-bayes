@@ -84,7 +84,7 @@ RAW = ["sd_g_raw", "tau_raw", "sd_step_raw", "sd_entry_raw", "sigma_pa_raw",
        "mu_entry_raw", "b_entry_raw"]
 
 
-def divergence_report(f, ages):
+def divergence_report(f, ages, anchor):
     """Where in parameter space the divergent transitions are.
 
     For each unconstrained coordinate the sampler sees, compare the draws
@@ -117,7 +117,15 @@ def divergence_report(f, ages):
     rep["scalars_log"] = {k: cmp(np.log(f.stan_variable(k).reshape(-1))) if k in RAW[:5]
                           else cmp(f.stan_variable(k).reshape(-1)) for k in RAW}
     gz = f.stan_variable("g_z")                                  # (draws, K)
-    per = [dict(age=int(ages[k]), **cmp(gz[:, k])) for k in range(gz.shape[1])]
+    # label each g_z by what it moves: the level, the slope, or the second
+    # difference of g centred at that age (k - 1 above the anchor, k + 1 below)
+    def label(k):
+        if k == anchor:
+            return "level"
+        if k == anchor + 1:
+            return "slope"
+        return int(ages[k - 1] if k > anchor else ages[k + 1])
+    per = [dict(age=label(k), **cmp(gz[:, k])) for k in range(gz.shape[1])]
     rep["g_z_top"] = sorted(per, key=lambda r: -abs(r["std_diff"]))[:8]
     # does the divergence sit where the curvature prior is tight (small sd_g)?
     lg = np.log(f.stan_variable("sd_g_raw").reshape(-1))
@@ -181,7 +189,7 @@ def main(prep_dir, out_dir):
            "divergences_per_chain": [int(x) for x in f.divergences],
            "curve_coverage_21_40": curve_cov,
            "scalars": scalars,
-           "divergence_report": divergence_report(f, ages)}
+           "divergence_report": divergence_report(f, ages, d["anchor_idx"] - 1)}
     res["pass"] = (res["divergences"] == 0 and curve_cov >= 0.8
                    and all(s["covered"] for s in scalars.values()))
     out = pathlib.Path(out_dir)
