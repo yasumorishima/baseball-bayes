@@ -101,6 +101,7 @@ def main(src: str, out_dir: str, TRAIN_END: int = 2024, EVAL_SEASON: int = 2025)
     stan = {
         "N": len(rows), "K": K, "age_idx": age_idx, "is_first": is_first,
         "prev_age_idx": prev_age_idx, "years": years, "entry_age_c": entry_age_c, "y": y, "pa": pa,
+        "anchor_idx": 27 - a_min + 1,
         "M": len(eval_rows),
         "last_obs": [e["last_obs"] for e in eval_rows],
         "target_age_idx": [e["target_age_idx"] for e in eval_rows],

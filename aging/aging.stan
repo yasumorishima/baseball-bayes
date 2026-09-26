@@ -15,8 +15,16 @@
 //
 // For k >= 2, g[k] is the average change in talent from age A_min + k - 2 to
 // A_min + k - 1. cum = cumulative_sum(g) is the aging curve up to a constant;
-// only differences of cum enter the likelihood, so g[1] only anchors the
-// smoothing prior. g follows a second-order random walk.
+// only differences of cum enter the likelihood, so g[1] never does. g follows
+// a second-order random walk, anchored at age 27 (anchor_idx): the level
+// g[anchor_idx] and slope g[anchor_idx + 1] - g[anchor_idx] have their own
+// priors and the walk runs outward from there in both directions. The second
+// differences of a random walk are the same forwards and backwards, so only
+// where the level and slope priors sit changes. Anchoring at the youngest age
+// (the third rehearsal) tied the level and slope the data fix at 23-33 to the
+// sum of every curvature step from age 19; the simulation check's divergent
+// draws differed most in exactly those two anchor coordinates (standardized
+// difference -2.4 and +2.3) and sat at large sd_g.
 //
 // Every scale parameter is sampled on the unit scale of its prior and then
 // multiplied by that scale (e.g. sd_step = 0.03 * sd_step_raw with
@@ -35,6 +43,7 @@ data {
   vector[N] y;                                 // wOBA minus league wOBA of that season
   vector<lower=1>[N] pa;
   int<lower=0, upper=1> use_aging;             // 0 = ablation with no aging drift
+  int<lower=2, upper=K - 1> anchor_idx;        // age index of 27, where the walk is anchored
 
   int<lower=0> M;                              // players to project
   array[M] int<lower=1, upper=N> last_obs;     // their last training season
@@ -60,10 +69,16 @@ transformed parameters {
   real tau = 0.02 * tau_raw;
   vector[K] g;
   vector[K] cum;
-  g[1] = 0.02 * g_z[1];
-  g[2] = g[1] + 0.01 * g_z[2];
-  for (k in 3:K) {
+  // g_z[anchor_idx] and g_z[anchor_idx + 1] carry the level and slope; every
+  // other g_z[k] is the curvature step that reaches age index k.
+  g[anchor_idx] = 0.02 * g_z[anchor_idx];
+  g[anchor_idx + 1] = g[anchor_idx] + 0.01 * g_z[anchor_idx + 1];
+  for (k in (anchor_idx + 2):K) {
     g[k] = 2 * g[k - 1] - g[k - 2] + sd_g * g_z[k];
+  }
+  for (j in 1:(anchor_idx - 1)) {
+    int k = anchor_idx - j;
+    g[k] = 2 * g[k + 1] - g[k + 2] + sd_g * g_z[k];
   }
   cum = cumulative_sum(g);
 }
