@@ -7,7 +7,7 @@ Bayesian models for baseball data, written in Stan and run on GitHub Actions
 
 | Model | What it asks | Status |
 | --- | --- | --- |
-| [aging/](aging/) | Does a dynamic hierarchical aging curve project next-season wOBA better than Marcel? | pre-registered, not yet run |
+| [aging/](aging/) | Does a dynamic hierarchical aging curve project next-season wOBA better than Marcel? | rehearsal (2023 -> 2024) fits failed the validity rule; fixing the sampler before the pre-registration is frozen and 2025 is run |
 
 Every test is pre-registered: the question, data, metric and the readings of
 each possible outcome are committed before the first fit, and results are
