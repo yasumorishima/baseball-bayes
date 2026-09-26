@@ -1,0 +1,29 @@
+{
+ "n_players": 416,
+ "diagnostics": {
+  "aging": {
+   "divergences": 138,
+   "max_treedepth_hits": 0,
+   "max_rhat": 1.00921,
+   "min_ess_bulk": 272.428,
+   "seconds": 1154.0,
+   "fallback": false,
+   "valid": false
+  },
+  "no_aging": {
+   "divergences": 0,
+   "max_treedepth_hits": 0,
+   "max_rhat": 1.02267,
+   "min_ess_bulk": 318.577,
+   "seconds": 464.6,
+   "fallback": false,
+   "valid": false
+  }
+ },
+ "ci_half_widths": {
+  "aging - marcel (wmae)": 0.0009802106215961457,
+  "aging - marcel (wrmse)": 0.0011185907041685174,
+  "aging - no_aging (wmae)": 0.000688250767447692,
+  "aging - no_aging (wrmse)": 0.0007332431284460517
+ }
+}
