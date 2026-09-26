@@ -62,6 +62,8 @@ transformed data {
   matrix[K, K] Hg = rep_matrix(0, K, K);
   vector[K - 2] lam;
   matrix[K - 2, K - 2] Q;
+  matrix[2, K - 2] B;      // approx. posterior regression of level/slope on the steps
+  matrix[2, 2] L;          // and the Cholesky factor of their conditional covariance
   {
     int j = 1;
     for (k in 1:K) {
@@ -102,10 +104,12 @@ transformed data {
     tuple(matrix[K - 2, K - 2], vector[K - 2]) eg = eigendecompose_sym(S);
     lam = fmax(eg.2, 0);
     Q = eg.1;
+    B = -mdivide_left_spd(Hnn, Hz[nidx, cidx]);
+    L = cholesky_decompose(inverse_spd(Hnn));
   }
 }
 parameters {
-  vector[2] ls_z;          // level and slope at the anchor, unit scale
+  vector[2] ls_z;          // level and slope given the steps, see below
   vector[K - 2] mode_z;    // curvature modes (columns of Q), see model block
   real<lower=0> sd_g_raw;
   real mu_entry_raw;
@@ -136,8 +140,13 @@ transformed parameters {
     vector[K - 2] f = sqrt(1 + lam * square(sd_g));
     dz[cidx] = Q * (sd_g * mode_z ./ f);
   }
-  g[anchor_idx] = 0.02 * ls_z[1];
-  g[anchor_idx + 1] = g[anchor_idx] + 0.01 * ls_z[2];
+  // Level and slope (natural units) are the approximate posterior mean given
+  // the curvature steps, B * d, plus L * ls_z. The map (ls_z, mode_z) ->
+  // (ls, mode_z) is linear with constant Jacobian |L|, so putting the prior
+  // on ls itself (model block) keeps the model unchanged.
+  vector[2] ls = B * dz[cidx] + L * ls_z;
+  g[anchor_idx] = ls[1];
+  g[anchor_idx + 1] = g[anchor_idx] + ls[2];
   for (k in (anchor_idx + 2):K) {
     g[k] = 2 * g[k - 1] - g[k - 2] + dz[k];
   }
@@ -152,7 +161,7 @@ model {
   // b_entry ~ normal(0, 0.01), sd_entry ~ half-normal(0, 0.05),
   // sd_step ~ half-normal(0, 0.03), sigma_pa ~ normal+(0.5, 0.2),
   // tau ~ half-normal(0, 0.02).
-  ls_z ~ std_normal();
+  ls ~ normal(0, [0.02, 0.01]');   // level ~ N(0, 0.02), slope ~ N(0, 0.01), as before
   mode_z ~ normal(0, sqrt(1 + lam * square(sd_g)));
   sd_g_raw ~ std_normal();
   mu_entry_raw ~ std_normal();
