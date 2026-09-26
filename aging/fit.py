@@ -32,7 +32,7 @@ def fit(model, data, a_min, use_aging, out, fallback):
     t0 = time.time()
     f = model.sample(data=d, chains=CHAINS, parallel_chains=CHAINS,
                      iter_warmup=WARMUP, iter_sampling=SAMPLES, seed=SEED,
-                     adapt_delta=0.99 if fallback else 0.9,
+                     adapt_delta=0.99 if fallback else 0.9, metric="dense_e",
                      max_treedepth=12 if fallback else 10,
                      show_progress=False)
     seconds = time.time() - t0

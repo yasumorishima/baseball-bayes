@@ -166,7 +166,7 @@ def main(prep_dir, out_dir):
     # 2. recovery
     model = CmdStanModel(stan_file=str(HERE / "aging.stan"))
     f = model.sample(data=sim, chains=4, parallel_chains=4, iter_warmup=1000,
-                     iter_sampling=1000, seed=SEED, adapt_delta=0.9,
+                     iter_sampling=1000, seed=SEED, adapt_delta=0.9, metric="dense_e",
                      show_progress=False)
     draws = f.stan_variable("cum")
     rel = draws - draws[:, [list(ages).index(27)]]
