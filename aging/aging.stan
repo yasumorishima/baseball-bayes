@@ -85,8 +85,11 @@ transformed data {
       }
       T[:, c] = t;
     }
+    // The ablation (use_aging = 0) has no g in its likelihood, so the data
+    // carry no information on g: Hg stays zero, lam = 0, B = 0 and L is the
+    // prior scale, which is the plain non-centred parameterization.
     for (n in 2:N) {
-      if (!is_first[n]) {
+      if (use_aging && !is_first[n]) {
         int a = prev_age_idx[n] + 1;
         int b = age_idx[n];
         real w = 1 / (0.25 / pa[n - 1] + 0.25 / pa[n] + 2 * square(0.016)
