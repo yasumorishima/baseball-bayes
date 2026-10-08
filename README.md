@@ -14,6 +14,8 @@ Bayesian models for baseball data, written in Stan and run on GitHub Actions
 
 ![Four batters: the line the aging model drew through 2024, then where 2025 landed](development/out/tracker_2025.gif)
 
-Every test is pre-registered: the question, data, metric and the readings of
-each possible outcome are committed before the first fit, and results are
-reported as they come out.
+The aging test is pre-registered: the question, data, metric and the readings of
+each possible outcome were committed before the first fit, and results are
+reported as they come out. The development tracker is not: its pass rule was
+written before the first run but arrived in the same commit as the script and
+its output (see development/README.md).
