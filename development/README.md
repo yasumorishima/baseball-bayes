@@ -9,6 +9,13 @@ talent after his history, the random steps since his last season, the
 season-only deviation, sampling noise for his 2025 PA, and the projection's
 posterior sd.
 
+![Four batters: the line the aging model drew through 2024, then where 2025 landed](out/tracker_2025.gif)
+
+The model's line for four batters aged 25 or younger, one season at a time.
+Between seasons the line heads for what the model predicted before seeing the
+next season, and jumps once that season is in. In 2025, Perdomo and Turang
+landed above their 90% forecast interval and Harris II and Peraza below it.
+
 ## Calibration (2025, out of sample)
 
 The pass rule is in the docstring of [tracker.py](tracker.py): share with
@@ -48,3 +55,4 @@ Harris II -1.79.
 
     python aging/prepare.py <mart_batter_season @ 7746d62> prep 2024 2025
     python development/tracker.py prep aging/runs/final-20260926T081005Z development/out
+    python development/gif.py prep aging/runs/final-20260926T081005Z <mart_batter_season @ 7746d62> development/out/tracker_2025.csv development/out/tracker_2025.gif
