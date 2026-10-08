@@ -34,7 +34,15 @@ Aging curve, relative wOBA against the peak, posterior median [90% band]:
 
 | age | 21 | 24 | 27 | 30 | 33 | 36 | 40 |
 |---|---|---|---|---|---|---|---|
-| vs peak | -0.017 [-0.023, -0.012] | -0.003 [-0.005, -0.001] | -0.000 [-0.001, 0.000] | -0.006 [-0.008, -0.004] | -0.020 [-0.023, -0.016] | -0.040 [-0.046, -0.034] | -0.074 [-0.088, -0.058] |
+| vs peak | -0.017 [-0.023, -0.012] | -0.003 [-0.005, -0.001] | -0.000 [-0.001, 0.000] | -0.006 [-0.008, -0.004] | -0.019 [-0.023, -0.016] | -0.040 [-0.046, -0.034] | -0.073 [-0.088, -0.058] |
+
+Correction (2026-10-08): the medians at 33 and 40 were printed as -0.020 and
+-0.074. `fit_aging.json` gives -0.01947 and -0.07346, so they are -0.019 and
+-0.073. The bands and the peak probabilities were right.
+
+![The aging curve drawn one age at a time, 20 to 40](curve.gif)
+
+    python aging/curve_gif.py aging/runs/final-20260926T081005Z aging/curve.gif
 
 Peak age (maximum over 21-40): 26 with posterior probability 0.52, 27 with
 0.42; the maximum over all ages falls outside 21-40 in 0.85% of draws.
