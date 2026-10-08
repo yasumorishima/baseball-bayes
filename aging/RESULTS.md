@@ -42,7 +42,7 @@ Correction (2026-10-08): the medians at 33 and 40 were printed as -0.020 and
 
 ![The aging curve drawn one age at a time, 20 to 40](curve.gif)
 
-    python aging/curve_gif.py aging/runs/final-20260926T081005Z aging/curve.gif
+    python aging/curve_gif.py prep aging/runs/final-20260926T081005Z aging/curve.gif
 
 Peak age (maximum over 21-40): 26 with posterior probability 0.52, 27 with
 0.42; the maximum over all ages falls outside 21-40 in 0.85% of draws.

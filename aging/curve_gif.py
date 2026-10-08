@@ -1,11 +1,14 @@
 """Animated aging curve of the final fit: relative wOBA against the peak,
 posterior median and 90% band, drawn one age at a time from 20 to 40.
 
-Reads only fit_aging.json of the final run. The numbers it shows are checked
-against the table in RESULTS.md before anything is drawn.
+Reads fit_aging.json of the final run, and the prepared training data only to
+count the seasons behind each age. Before anything is drawn, the seven ages
+tabulated in RESULTS.md (copied into TABLE below) and the peak probabilities
+must match the fit. Ages in between are drawn from the fit unchecked.
 
-Usage: python curve_gif.py <final run dir> <out gif>
+Usage: python curve_gif.py <prepared dir (prepare.py, 2024 / 2025)> <final run dir> <out gif>
 """
+import collections
 import io
 import json
 import pathlib
@@ -24,10 +27,21 @@ LINE, BAND, MARK = "#3b5b92", "#3b5b92", "#b8432f"
 TABLE = {21: (-0.017, -0.023, -0.012), 24: (-0.003, -0.005, -0.001), 27: (-0.000, -0.001, 0.000),
          30: (-0.006, -0.008, -0.004), 33: (-0.019, -0.023, -0.016), 36: (-0.040, -0.046, -0.034),
          40: (-0.073, -0.088, -0.058)}
+PEAK_SHARE = {"26": 0.52, "27": 0.42}   # RESULTS.md, rounded to 0.01
+THIN = 30                               # fewer training seasons than this at an age is called thin
 
 
-def main(run_dir, out_gif):
+def main(prep_dir, run_dir, out_gif):
     f = json.loads((pathlib.Path(run_dir) / "fit_aging.json").read_text())
+    d = json.loads((pathlib.Path(prep_dir) / "stan_data.json").read_text())
+    a_min = json.loads((pathlib.Path(prep_dir) / "meta.json").read_text())["a_min"]
+    if a_min != f["ages"][0]:
+        raise SystemExit("prepared data and fit disagree on the first age")
+    n_at = collections.Counter(a + a_min - 1 for a in d["age_idx"])
+    pk = f["peak_age_counts_21_40"]
+    for a, share in PEAK_SHARE.items():
+        if round(pk[a] / sum(pk.values()), 2) != share:
+            raise SystemExit(f"peak share at {a} differs from RESULTS.md")
     ages = np.array(f["ages"])
     med, lo, hi = (np.array(f["curve"][k]) for k in ("0.5", "0.05", "0.95"))
     for a, vals in TABLE.items():
@@ -38,6 +52,7 @@ def main(run_dir, out_gif):
     keep = (ages >= A0) & (ages <= A1)
     ages, med, lo, hi = ages[keep].astype(float), med[keep], lo[keep], hi[keep]
     peak = int(ages[np.argmax(med)])
+    thin = min(a for a in range(peak, A1 + 1) if n_at[a] < THIN)
     # RESULTS.md: the peak is 26 (posterior probability 0.52) or 27 (0.42)
     if peak not in (26, 27):
         raise SystemExit(f"median curve peaks at {peak}")
@@ -80,8 +95,12 @@ def main(run_dir, out_gif):
         fig.suptitle(head, fontsize=16, x=0.02, ha="left", y=0.975)
         fig.text(0.98, 0.9, f"age {int(np.floor(x + 1e-9))}", fontsize=26, ha="right", va="top",
                  weight="bold", color="#444444")
-        fig.text(0.02, 0.01, "Line: posterior median. Shade: 90% band. Batters 2015-2024, relative to the "
-                 "league wOBA of each season.", fontsize=10, color="#555555")
+        if x >= thin:
+            ax.axvspan(thin - 0.5, A1 + 0.5, color="#f3e6e3", lw=0, zorder=0)
+            ax.text(thin - 0.3, min(lo) * 1000 - 2, f"few batters this old\n({n_at[A1]} seasons at {A1})",
+                    fontsize=11, color="#8a4a3e", va="bottom")
+        fig.text(0.02, 0.01, "Line: posterior median. Shade: 90% band at each age. Batters 2015-2024; "
+                 "wOBA vs the league that season, then vs the peak.", fontsize=10, color="#555555")
         fig.subplots_adjust(left=0.1, right=0.97, top=0.8, bottom=0.15)  # fixed, so frames do not jitter
         buf = io.BytesIO()
         fig.savefig(buf, format="png", facecolor="white")
@@ -96,6 +115,6 @@ def main(run_dir, out_gif):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 3:
+    if len(sys.argv) != 4:
         raise SystemExit(__doc__)
     main(*sys.argv[1:])
