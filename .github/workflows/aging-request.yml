@@ -1,0 +1,153 @@
+name: Aging curve (request)
+
+# DRAFT for the 2026 replication of the pre-registered aging test.
+# Cloud sessions cannot dispatch workflows (403) but can merge a PR into main,
+# so this runs on a push to main that touches aging/requests/run2026.json.
+# aging.yml (frozen by md5 in aging/PREREG.md) is NOT edited; this file reuses
+# the frozen scripts byte-for-byte with train_end 2025 / eval 2026.
+#
+# Fail-closed until frozen: aging/PREREG_2026.md must exist, contain exactly one
+# line "DATASET_REVISION: <40-hex Hugging Face commit>", and list md5s of the
+# frozen files (including this one). This file never needs editing, so cloud
+# sessions do not have to push under .github/workflows/.
+# The run refuses to start a second time (one run only).
+#
+# Request file (aging/requests/run2026.json):
+#   {"mode": "final", "memo": "<why this run>"}
+
+on:
+  push:
+    branches: [main]
+    paths: ["aging/requests/run2026.json"]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: aging
+  cancel-in-progress: false
+
+env:
+  CMDSTAN_VERSION: "2.40.0"
+  TRAIN_END: "2025"
+  EVAL_SEASON: "2026"
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # full history, so the final pull --rebase never meets a shallow boundary
+
+      - name: Read the request
+        id: req
+        run: |
+          f=aging/requests/run2026.json
+          mode=$(jq -r '.mode' "$f")
+          memo=$(jq -r '.memo' "$f")
+          [ "$mode" = final ] || { echo "only mode=final is allowed, got: $mode"; exit 1; }
+          [ -n "$memo" ] && [ "$memo" != null ] || { echo "memo is required"; exit 1; }
+          # One run only. Check the latest main, not just this checkout: a second
+          # push queued behind a running job checks out its own (older) SHA, which
+          # does not yet contain the first run's commit.
+          if ls -d aging/runs/final2026-* >/dev/null 2>&1; then
+            echo "a 2026 final run is already committed (this checkout); the test runs once"; exit 1
+          fi
+          git fetch --no-tags origin main
+          if git ls-tree -d --name-only origin/main aging/runs/ | grep -q '^aging/runs/final2026-'; then
+            echo "a 2026 final run is already committed on main; the test runs once"; exit 1
+          fi
+          # The freeze must be provably earlier: the triggering push may not touch the PREREG or a frozen file.
+          before="${{ github.event.before }}"
+          if [ -z "$before" ] || ! git cat-file -e "$before^{commit}" 2>/dev/null; then
+            echo "cannot read the commit before this push ($before); refusing"; exit 1
+          fi
+          if ! git diff --quiet "$before" "$GITHUB_SHA" -- aging/PREREG_2026.md aging/prepare.py aging/aging.stan \
+                 aging/fit.py aging/evaluate.py aging/simcheck.py .github/workflows/aging.yml requirements.txt \
+                 .github/workflows/aging-request.yml; then
+            echo "this push changes the PREREG or a frozen file; merge the freeze first, then the request alone"; exit 1
+          fi
+          delim="MEMO_$(openssl rand -hex 16)"
+          { echo "memo<<$delim"; echo "$memo"; echo "$delim"; } >> "$GITHUB_OUTPUT"
+
+      - name: Check the frozen files
+        run: |
+          # The md5 list in PREREG_2026.md ("<32-hex>  <path>" lines) must cover every
+          # required file below, and every listed file must match.
+          grep -E '^[0-9a-f]{32}  [^ ]+$' aging/PREREG_2026.md > "$RUNNER_TEMP/frozen.md5" || true
+          [ -s "$RUNNER_TEMP/frozen.md5" ] || { echo "no md5 list in aging/PREREG_2026.md"; exit 1; }
+          missing=0
+          for f in aging/prepare.py aging/aging.stan aging/fit.py aging/evaluate.py aging/simcheck.py \
+                   .github/workflows/aging.yml requirements.txt .github/workflows/aging-request.yml; do
+            n=$(awk -v f="$f" '$2 == f' "$RUNNER_TEMP/frozen.md5" | wc -l)
+            [ "$n" = 1 ] || { echo "PREREG_2026.md must list $f exactly once (found $n)"; missing=1; }
+          done
+          [ "$missing" = 0 ] || exit 1
+          md5sum -c "$RUNNER_TEMP/frozen.md5"
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11.16"
+          cache: pip
+          cache-dependency-path: requirements.txt
+
+      - run: pip install -r requirements.txt
+
+      - name: Cache CmdStan
+        id: cmdstan-cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cmdstan
+          key: cmdstan-${{ env.CMDSTAN_VERSION }}-${{ runner.os }}
+
+      - name: Install CmdStan
+        if: steps.cmdstan-cache.outputs.cache-hit != 'true'
+        run: python -c "import cmdstanpy; cmdstanpy.install_cmdstan(version='${{ env.CMDSTAN_VERSION }}', cores=4, progress=False)"
+
+      - name: Resolve the input revision
+        id: rev
+        run: |
+          # Exactly one line "DATASET_REVISION: <40-hex>" in the frozen PREREG_2026.md.
+          n=$(grep -cE '^DATASET_REVISION: [0-9a-f]{40}$' aging/PREREG_2026.md || true)
+          [ "$n" = 1 ] || { echo "need exactly one 'DATASET_REVISION: <40-hex>' line in aging/PREREG_2026.md, found $n"; exit 1; }
+          sha=$(grep -E '^DATASET_REVISION: [0-9a-f]{40}$' aging/PREREG_2026.md | cut -d' ' -f2)
+          echo "sha=$sha" >> "$GITHUB_OUTPUT"
+
+      - name: Prepare
+        working-directory: aging
+        run: |
+          src="https://huggingface.co/datasets/yasumorishima/mlb-stats/resolve/${{ steps.rev.outputs.sha }}/marts/mart_batter_season.parquet"
+          python prepare.py "$src" work/prep "$TRAIN_END" "$EVAL_SEASON"
+
+      - name: Fit
+        working-directory: aging
+        run: python fit.py work/prep work/fit
+
+      - name: Evaluate
+        working-directory: aging
+        run: python evaluate.py work/prep work/fit work/eval
+
+      - name: Commit the run
+        working-directory: aging
+        env:
+          MEMO: ${{ steps.req.outputs.memo }}
+        run: |
+          stamp="$(date -u +%Y%m%dT%H%M%SZ)"
+          dir="runs/final2026-$stamp"
+          mkdir -p "$dir"
+          cp work/prep/meta.json "$dir/"
+          jq -n --arg rev "${{ steps.rev.outputs.sha }}" --arg commit "$GITHUB_SHA" \
+                --arg memo "$MEMO" --arg run "$GITHUB_RUN_ID" \
+            '{input_dataset_revision: $rev, code_commit: $commit, run_id: $run, memo: $memo}' > "$dir/run.json"
+          cp work/fit/selection.json "$dir/"
+          cp work/eval/results.json work/fit/fit_*.json work/prep/eval.json "$dir/"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$dir"
+          git commit -m "aging: final 2026 run $stamp"
+          git pull --rebase origin main
+          n=$(ls -d runs/final2026-* | wc -l)
+          [ "$n" = 1 ] || { echo "expected exactly one runs/final2026-* after rebase, found $n; not pushing"; exit 1; }
+          git push origin HEAD:main
