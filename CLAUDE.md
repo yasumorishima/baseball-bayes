@@ -13,6 +13,7 @@ This project is worked on in Claude Code cloud. The owner starts a session with 
 - 2026-09-26: aging test pre-registered (`03ba907`) after 10 rehearsals; final run `36228633245` (train <= 2024, project 2025): H1 aging−marcel MAE −0.00067 [−0.00168, +0.00033], H2 aging−no_aging −0.00071 [−0.00143, +0.00002] — both **indistinguishable**. Development tracker on 2025 (rule written before the run but committed with the script and output): 10.2% outside the 90% interval, sd(z) 0.975, upper tail heavier (6.8% vs 3.4%).
 - 2026-10-08: GIFs for the curve and the tracker (PR #1–#3); the GIF gate found two wrong medians in RESULTS.md (33: −0.019, 40: −0.073), corrected with a note. README states only the aging test is pre-registered (PR #4).
 - 2026-10-23 (local, migration prep): a fresh clone reproduced the final run's `eval.json` and `meta.json` byte-for-byte from HF `7746d62`; the 7 frozen md5s in PREREG.md match `main`. HF marts `deaeb85b8601c64981cd2082d06941f2d20f5f3f` (2026-10-19) hold a complete 2026 (`is_partial` false, 662 rows, 183,849 PA; at `7746d62` 2026 was partial). Seasons <= 2025 differ between the two revisions in 1 row (season 2016). `prepare.py <deaeb85> … 2025 2026` gives N 7,049 / 1,748 players / M 411; the 2026 values were not opened. Added `.github/workflows/aging-request.yml` (not run yet; fails closed until `aging/PREREG_2026.md` exists).
+- 2026-11-23 (cloud): added "Evaluation practice (評価の作法, 2026-11 addition)" from Anthropic "Building strong safety evaluations" (owner: 「今後の評価の糧にしたい」); no other section changed. Same addition made in mlb-win-probability, npb-foreign-statcast, baseball-bayes, npb-prediction, mlb-data-pipeline, jev-baseball (mlb-pitch-forecast is not attached to this session).
 
 ## What this is
 Bayesian models for MLB batters, written in Stan, run on GitHub Actions, inputs from the HF dataset `yasumorishima/mlb-stats` (`marts/mart_batter_season.parquet`, built by `yasumorishima/mlb-data-pipeline`).
@@ -29,6 +30,13 @@ Bayesian models for MLB batters, written in Stan, run on GitHub Actions, inputs 
 7. Code that produces a result gets an independent review (Opus subagent) before it runs; verify every review claim against the code/data before accepting it. Numbers in RESULTS/README are checked by a script against the run's JSON, not copied by hand.
 8. Report nulls as facts; no "ceiling / limit / nothing left" framing. One season, one league, one statistic: do not generalise to NPB or other targets.
 9. Do not suggest writing a blog post as the next step; the next step is the next analysis.
+
+## Evaluation practice (評価の作法, 2026-11 addition)
+Lessons taken from Anthropic, "Building strong safety evaluations" (2026-11-13), kept only where they change what the next evaluation here does; rules above that already cover a point are not repeated.
+- **Report every slice, changed or not:** PA band (100–299 / 300+) and age band, next to the headline H1/H2, including slices where nothing moved. Slice readings are descriptive unless the PREREG makes them decisions; if it does, it declares the correction for two hypotheses × slices.
+- **Write the construct before data** (what "better aging" means for next-season relative wOBA) and keep a do-nothing arm in every new test (Marcel / no-drift already play this role; keep them).
+- **A surprising number is a harness suspect first:** re-check `prepare.py` counts, the revision and `selection.json` before any reading.
+- **Configuration:** a result row carries data revision, code commit, CmdStan / package versions and run id; numbers that differ in more than one of these are not compared directly (2025 vs 2026 is shown side by side, not tested).
 
 ## Next tasks (in order)
 1. ~~Request-triggered workflow~~ — done in the migration commit: `.github/workflows/aging-request.yml` runs on a push to `main` that touches `aging/requests/run2026.json`, reuses the frozen scripts with train_end 2025 / eval 2026, reads the input revision from the single line `DATASET_REVISION: <40-hex>` in `aging/PREREG_2026.md`, checks the md5 list there, refuses a second 2026 run, and commits `aging/runs/final2026-<stamp>/`. It fails closed until that PREREG exists. **Do not edit any file under `.github/workflows/`** (it is frozen and cloud pushes there are unverified); everything the run needs comes from `aging/PREREG_2026.md`.
